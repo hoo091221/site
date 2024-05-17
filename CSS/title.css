@@ -5,6 +5,7 @@
 	margin: 0px;
 	background-attachment: fixed;
 	background-position: center;
+	scroll-snap-type: y mandatory;
 }
 
 .op_5 {
