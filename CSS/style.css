@@ -1,34 +1,43 @@
-
 /* 배경 꽉 채우기 */
 
 .full {
-	width: 100%;
-	height: 100vh;
+    width: 100%;
+    height: 100vh;
 }
+
 
 /* 글씨체 적용 */
 
-h1,h2,h3,h4,h5,h6,p {
-	font-family: 'Jua', sans-serif;
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+    font-family: 'Jua', sans-serif;
 }
+
 
 /* 스크롤바 제거 */
 
-body{
- -ms-overflow-style: none;
- }
- 
-::-webkit-scrollbar {
-  display: none;
+body {
+    -ms-overflow-style: none;
 }
+
+::-webkit-scrollbar {
+    display: none;
+}
+
 
 /* 범위 지정 색상 변경 */
 
 ::-moz-selection {
-   background: #b0c0fd;
-   color: #000;
+    background: #b0c0fd;
+    color: #000;
 }
+
 ::selection {
-   background: #b0c0fd;
-   color: #000;
+    background: #b0c0fd;
+    color: #000;
 }
