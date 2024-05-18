@@ -12,6 +12,10 @@
     scroll-snap-align: start;
 }
 
+.op_5 {
+    /* snap-scroll-type: y mandatory; */
+    scroll-snap-type: y mandatory;
+}
 /* 글씨체 적용 */
 
 h1,

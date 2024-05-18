@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="./../../img/icon/pi.png">
+    <title>원주율</title>
+    <!-- bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    <!-- CSS -->
+    <link rel="stylesheet" href="./CSS/style.css">
+    <link rel="stylesheet" href="./../.CSS/footer.css">
+</head>
+
+<body style="margin: 0px; background-repeat: no-repeat; background-size: cover;">
+
+    <!-- navbar -->
+
+    <nav class="navbar navbar-expand-lg bg-body-tertiary" style="position:fixed;width: 100vw; z-index: 10;">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">원주율</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarText">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#TOP">TOP</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#content">복사하기</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#floatn">n번째 자리</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#search">위치 검색</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="./pi.txt">원주율.txt</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- bgimg -->
+
+    <div class="bgimg">
+        <div class="darkness">
+            <center>
+                <h1 class="splash-text subtitle">
+                    <span style="background-image: linear-gradient(to right, #CCC, #777);
+					background-clip: text;
+					-webkit-background-clip: text;
+					color: transparent;"><b>원주율</b></span>에 대한 모든 것,
+                </h1>
+                <h1 class="splash-p title">
+                    여기에서 확인하세요.
+                </h1>
+                <h1 class="splash-btn ptitle">
+                    소수 10만 번째 자리까지 지원합니다.
+                </h1>
+            </center>
+        </div>
+    </div>
+
+    <!-- content -->
+
+    <a name="content"></a>
+    <div class="content content-div">
+        <p>ㅤ</p>
+        <div class="bd">
+            <center>
+                <div id="block">
+                    <div class="block">
+                        <h1 id="text"></h1>
+                    </div>
+                    <div style="float: none">
+                        <h1 class="font float">소수 </h1>
+                        <input class="float" oninput='handleOnInput(this, 5)' id="input1" type="number" placeholder="0~99999">
+                        <h1 class="font float"> 번째 자리까지</h1>
+                    </div>
+                    <center>
+                        <button class="custom-btn btn-14" onclick="copy()">복사하기</button>
+                    </center>
+
+                    <button id="btn" class="btn"></button>
+                </div>
+            </center>
+        </div>
+
+        <!-- floatn -->
+
+        <a name="floatn"></a>
+        <div class="bd">
+            <center>
+                <div id="block">
+                    <div style="float: none">
+                        <h1 class="font float">𝛑의 소수 </h1>
+                        <input class="float" oninput='handleOnInput(this, 5)' id="input2" type="number" placeholder="0~99999">
+                        <h1 class="font float"> 번째 자리</h1>
+                    </div>
+                    <center>
+                        <button class="custom-btn btn-14" onclick="number()">검색하기</button>
+                        <h1 id="pin" style="font-size: 3vw; color: #555">여기에 결과값이 나옵니다.</h1>
+                    </center>
+                    <button id="btn" class="btn"></button>
+                </div>
+            </center>
+        </div>
+
+        <!-- search -->
+
+        <a name="search"></a>
+        <div class="bd">
+            <center>
+                <div id="block">
+                    <div style="float: none">
+                        <h1 class="font float"></h1>
+                        <input class="float" id="input3" type="number" placeholder="수를 입력하세요">
+                        <h1 class="font float">가 있는 𝛑의 자리</h1>
+                    </div>
+                    <center>
+                        <button class="custom-btn btn-14" onclick="search()">검색하기</button>
+                        <h1 id="pinum" style="font-size: 3vw; color: #555">여기에 결과값이 나옵니다.</h1>
+                    </center>
+                    <button id="btn" class="btn"></button>
+                </div>
+            </center>
+        </div>
+    </div>
+
+    <!-- footer -->
+
+    <footer class="footer">
+        <center>
+            <div class="footer-div">
+                <p class="footer-center">© 2024 All rights reserved.</p>
+                <a target="_blank" style="text-decoration: none; color: #717171;" href="https://hoo091221.github.io/nomo">NOMO</a> |
+                <a target="_blank" style="text-decoration: none; color: #717171;" href="https://hoo091221.github.io/lunch">거제중학교 급식</a> |
+                <a target="_blank" style="text-decoration: none; color: #717171;" href="https://hoo091221.github.io/binary">이진수 계산기</a> |
+                <a target="_blank" style="text-decoration: none; color: #717171;" href="https://hoo091221.github.io/light">빛의 삼원색</a> |
+                <a target="_blank" style="text-decoration: none; color: #C1C1C1;" href="https://hoo091221.github.io/pi">원주율</a> |
+                <a target="_blank" style="text-decoration: none; color: #717171;" href="https://hoo091221.github.io/write">전달!</a>
+                <center>
+                    <hr class="footer-hr">
+                </center>
+                <p class="footer-left">
+                    이메일 hoo091221@gmail.com
+                    <br> <a href="https://www.instagram.com/hoo_091221" style="color: #717171; text-decoration: none;">인스타그램 @hoo_091221</a>
+                    <br>이 사이트는 여러분의 개인정보를 수집하지 않습니다.
+                    <br>image copyright <a href="https://www.pixabay.com" style="color: #717171; text-decoration: none;">www.pixabay.com</a>
+                </p>
+            </div>
+        </center>
+    </footer>
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            const splashText = document.querySelector(".splash-text");
+            const splashP = document.querySelector(".splash-p");
+            const splashBtn = document.querySelector(".splash-btn");
+
+            setTimeout(() => {
+                splashText.style.opacity = "1";
+                splashText.style.transform = "translateY(0)";
+
+                setTimeout(() => {
+                    splashP.style.opacity = "1";
+                    splashP.style.transform = "translateY(0)";
+
+
+                    setTimeout(() => {
+                        splashBtn.style.opacity = "1";
+                        splashBtn.style.transform = "translateY(0)";
+                    }, 500);
+                }, 500);
+            }, 500);
+        });
+
+        function handleOnInput(el, maxlength) {
+            if (el.value.length > maxlength) {
+                el.value = el.value.substr(0, maxlength);
+            }
+        }
+
+        var pi = readTextFile('./pi.txt');
+
+        function readTextFile(file) {
+            var rawFile = new XMLHttpRequest();
+            rawFile.open("GET", file, false);
+            rawFile.onreadystatechange = function() {
+                allText = rawFile.responseText;
+            }
+            rawFile.send(null);
+            return rawFile.responseText;
+        }
+
+        document.getElementById('text').innerHTML = readTextFile('./pi.txt');
+
+        function copy() {
+            var input1 = document.getElementById('input1').value;
+            navigator.clipboard.writeText(pi.slice(0, Number(input1) + 2));
+            alert('복사되었습니다!');
+        }
+
+        function number() {
+            var input2 = document.getElementById('input2').value;
+            document.getElementById('pin').innerHTML = pi.slice(Number(input2) - 1, Number(input2) + 1) + '<span style="color: #000; font-size: 4vw;">' +
+                pi.slice(Number(input2) + 1, Number(input2) + 2) + '</span>' +
+                pi.slice(Number(input2) + 2, Number(input2) + 4);
+        }
+
+        function search() {
+            if (pi.indexOf(document.getElementById('input3').value) != '-1') {
+                document.getElementById('pinum').innerHTML = pi.indexOf(document.getElementById('input3').value) + '번째 자리에 있네요!';
+            } else {
+                document.getElementById('pinum').innerHTML = '흠... 존재하지 않네요.';
+            }
+        }
+        window.onload = function() {
+            text.classList.add('animate');
+        };
+    </script>
+</body>
+
+</html>

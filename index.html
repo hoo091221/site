@@ -36,11 +36,11 @@
 <body style="background-color: #ddd">
     <!-- navbar -->
 
-    <nav class="navbar fixed-top" style="background: rgba(0, 0, 0, 0); color: white">
+    <nav class="navbar fixed-top" data-bs-theme="dark">
         <div class="container-fluid">
-            <a class="navbar-brand" style="color: white" href="#">
+            <a class="navbar-brand" href="#">
                 <img src="./img/icon/gift-solid.svg" alt="Logo" width="30" height="24"
-                    class="d-inline-block align-text-top" /> 포트폴리오!
+                    class="d-inline-block align-text-top" style="filter: invert(70%);" /> 포트폴리오!
             </a>
             <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar"
                 aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
@@ -58,16 +58,16 @@
                             <a class="nav-link active" aria-current="page" href="#">메인 화면</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#">후원하기</a>
+                            <a class="nav-link" href="./donate.html">후원하기</a>
                         </li>
                         <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                            <a class="nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown"
                                 aria-expanded="false">
                                 프로젝트
                             </a>
                             <ul class="dropdown-menu">
-                                <li><a class="dropdown-item" href="./project/doing-project/">진행중인 프로젝트</a></li>
-                                <li><a class="dropdown-item" href="./project/end-project/">완성된 프로젝트</a></li>
+                                <li><a class="dropdown-item" href="./project/doing-project/index.html">진행중인 프로젝트</a></li>
+                                <li><a class="dropdown-item" href="./project/end-project/index.html">완성된 프로젝트</a></li>
                                 <li>
                                     <hr class="dropdown-divider" />
                                 </li>
@@ -88,11 +88,13 @@
 
     <!-- 배경화면 -->
 
-    <div class="bgimg" id="bgdiv" onerror="this.src='./img/bgimg/bgimg_3.png';">
+    <div class="bgimg" id="bgdiv" style="background: url('./img/bgimg/bgimg_3.png');background-attachment: fixed;background-position: center;background-size: cover;background-repeat: no-repeat;">
 
         <div class="op_5 full">
             <div class="slides">
-                <h1 class="title splash-text">포트폴리오!</h1>
+                <center>
+                    <h1 class="splash-text title">포</h1><h1 class="splash-p title">트</h1><h1 class="splash-1 title">폴</h1><h1 class="splash-2 title">리</h1><h1 class="splash-3 title">오</h1><h1 class="splash-4 title">!</h1>
+                </center>
             </div>
 
             <!-- 다운로드창 -->
@@ -163,7 +165,20 @@
             <!-- 사이트 바로가기창 -->
             <div class="slides">
                 <center>
-                    <div class="bg cov">
+                    <div class="bg cov" style="display:inline-block">
+
+                        <!-- NOMO -->
+                        <!-- <div class="container1" style="display: inline-block;"> -->
+                            <div class="card scroll-text" style="width: 18rem; z-index: 0">
+                                <iframe src="https://hoo091221.github.io/nomo"></iframe>
+                                <div class="card-body">
+                                    <a href="https://hoo091221.github.io/nomo"
+                                        style="text-decoration: none; color: black;">
+                                        <p class="card-text">NOMO</p>
+                                    </a>
+                                </div>
+                            </div>
+                        <!-- </div> -->
 
                         <!-- 급식 -->
                         <!-- <div class="container1" style="display: inline-block;"> -->
@@ -172,7 +187,7 @@
                                 <div class="card-body">
                                     <a href="https://hoo091221.github.io/site/lunch"
                                         style="text-decoration: none; color: black;">
-                                        <p class="card-text">거제중학교</p>
+                                        <p class="card-text">학교 급식 메뉴</p>
                                     </a>
                                 </div>
                             </div>
@@ -186,7 +201,7 @@
                                 <div class="card-body">
                                     <a href="https://hoo091221.github.io/site/lunch"
                                         style="text-decoration: none; color: black;">
-                                        <p class="card-text">진법변환기!</p>
+                                        <p class="card-text">진법변환기</p>
                                     </a>
                                 </div>
                             </div>
@@ -198,7 +213,7 @@
                             <div class="card scroll-text" style="width: 18rem; z-index: 0">
                                 <iframe src="https://hoo091221.github.io/site/light"></iframe>
                                 <div class="card-body">
-                                    <p class="card-text">크리스마스</p>
+                                    <p class="card-text">빛의 삼원색</p>
                                 </div>
                             </div>
                         <!-- </div> -->
@@ -259,6 +274,7 @@
     <script src="./JS/ani1.js" rel="text/javascript"></script>
     <script src="./JS/ani2.js" rel="text/javascript"></script>
     <script src="./JS/cards.js" rel="text/javascript"></script>
+    <script src="./JS/scrollanim.js" rel="text/javascript"></script>
 </body>
 
 </html>

@@ -18,6 +18,14 @@ function bg() {
 	return num;
 }
 
+function dobg() {
+	var num = 1;
+	while (doesFileExist('./img/bgimg/doing/bgimg_' + num + '.png') == true) {
+		num = ++num;
+	}
+	return num;
+}
+
 bg();
 
 var num = bg() - 1;
@@ -28,5 +36,8 @@ document.getElementById('bgdiv-1').style.backgroundImage = "url('./img/bgimg/bgi
 
 var num = bg() - 3;
 document.getElementById('bgdiv-2').style.backgroundImage = "url('./img/bgimg/bgimg_" + num + ".png')";
+
+var num = dobg();
+document.getElementById('bgdiv-do').style.backgroundImage = "url('./img/bgimg/doing/bgimg_" + num + ".png')";
 
 // astrogistmonamegistos

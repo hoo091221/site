@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>십진수 이진수 변환기!</title>
+    <script src="./JS/binary.js"></script>
+</head>
+
+<body>
+    <h1>api 이용 문서</h1>
+    <p>자연수 외의 수는 변환할 수 없으며, 10자리가 넘어갈 시 제대로 된 결과가 출력되지 않을 수 있습니다.</p>
+    <h3>요청인자</h3>
+    <table>
+        <tr>
+            <td>인자</td>
+            <td>필수여부</td>
+            <td>설명</td>
+            <td>예</td>
+        </tr>
+        <tr>
+            <td>bin</td>
+            <td>X</td>
+            <td>해당하는 10진수를 어떤 수로 변환할 지 입력해주세요.<br>기본값은 two입니다.</td>
+            <td>two / four / eight / sixteen</td>
+        </tr>
+        <tr>
+            <td>num</td>
+            <td>O</td>
+            <td>변환할 10진수의 숫자를 입력해주세요.</td>
+            <td>20</td>
+        </tr>
+    </table>
+    <h3>결괏값</h3>
+    <table>
+        <tr>
+            <td>인자</td>
+            <td>설명</td>
+            <td>예</td>
+        </tr>
+        <tr>
+            <td>result</td>
+            <td>진법변환된 결괏값입니다.</td>
+            <td>10100</td>
+        </tr>
+        <tr>
+            <td>bin</td>
+            <td>해당하는 10진수를 어떤 수로 변환할 지 입력한 값입니다.</td>
+            <td>two / four / eight / sixteen</td>
+        </tr>
+        <tr>
+            <td>num</td>
+            <td>변환할 10진수의 숫자를 입력한 값입니다.</td>
+            <td>20</td>
+        </tr>
+        <tr>
+            <td>log</td>
+            <td>오류 로그입니다. 정상 처리되었다면 ok를 반환합니다.</td>
+            <td>ok</td>
+        </tr>
+    </table>
+    <h3>오류 로그</h3>
+    <table>
+        <tr>
+            <td>오류 코드</td>
+            <td>설명</td>
+        </tr>
+        <tr>
+            <td>100</td>
+            <td>num 인자의 형식이 올바르지 않습니다.</td>
+        </tr>
+        <tr>
+            <td>110</td>
+            <td>bin 인자의 형식이 올바르지 않습니다.</td>
+        </tr>
+        <tr>
+            <td>200</td>
+            <td>num 인자가 누락되어 있습니다. 요청인자를 참고해 주십시오.</td>
+        </tr>
+        <tr>
+            <td>210</td>
+            <td>bin 인자가 누락되어 있습니다. 요청인자를 참고해 주십시오.</td>
+        </tr>
+    </table>
+    <p></p>
+</body>
+
+</html>

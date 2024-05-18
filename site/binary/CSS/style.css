@@ -1,0 +1,190 @@
+@font-face {
+    font-family: 'EliceDigitalBaeum_Bold';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_220508@1.0/EliceDigitalBaeum_Bold.woff2') format('woff2');
+    font-weight: 700;
+    font-style: normal;
+}
+
+body {
+    -ms-overflow-style: none;
+    background: #AAA;
+}
+
+::-webkit-scrollbar {
+    display: none;
+}
+
+.c-div {
+    width: 90vw;
+    background: #FFF;
+    height: 75vh;
+    margin-top: calc(10vh + 2rem);
+    box-shadow: 0 1em 1em rgba(0, 200, 0, 0.5);
+    transition: all 1s ease;
+}
+
+.c-div:hover {
+    box-shadow: 0 1em 1em rgba(0, 50, 0, 0.5);
+}
+
+.h1 {
+    font-family: 'Jua', sans-serif;
+    font-size: 4vw;
+    line-height: 100px;
+}
+
+.input {
+    font-family: 'Jua', sans-serif;
+    width: 75vw;
+    height: 7vw;
+    border-radius: 1vw;
+    resize: none;
+    text-align: center;
+    font-size: 5vw;
+}
+
+.btn {
+    font-family: 'Jua', sans-serif;
+    font-size: 4vw;
+    margin-top: 2vh;
+    margin-bottom: 2vh;
+    width: 30vw;
+    height: 10vh;
+    border-radius: 100vw;
+    border: none;
+    background-color: #0fcf0f;
+}
+
+.content {
+    height: 100vh;
+}
+
+.darkness {
+    font-size: 10vw;
+    width: 100%;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.7);
+}
+
+.title {
+    font-family: 'EliceDigitalBaeum_Bold';
+    font-size: 5rem;
+    color: white;
+}
+
+.splash-text,
+.splash-p {
+    opacity: 0;
+    transform: translateY(-100px);
+    transition: opacity 1s, transform 1s;
+    z-index: 1;
+}
+
+.subtitle {
+    font-family: 'EliceDigitalBaeum_Bold';
+    color: white;
+    margin-right: 30vw;
+    padding-top: 40vh;
+    font-size: 3rem;
+}
+
+.bgimg {
+    background: url('https://cdn.pixabay.com/photo/2016/11/19/14/00/code-1839406_960_720.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100;
+    height: 100vh;
+    font-family: 'EliceDigitalBaeum_Bold';
+}
+
+.div {
+    line-height: 100px;
+    font-family: 'Jua', sans-serif;
+    width: 75vw;
+    height: 7vw;
+    border-radius: 1vw;
+    resize: none;
+    text-align: center;
+    font-size: 5vw;
+    background-color: rgba(255, 255, 255, 0.7);
+}
+
+select {
+    margin-top: 2vh;
+    font-size: 2vw;
+    border-radius: 1vw;
+    font-family: 'Jua', sans-serif;
+    width: 15vw;
+    height: 7.5vw
+}
+
+@media (width < 1000px) {
+    .title {
+        font-size: 10vw;
+    }
+    .subtitle {
+        font-size: 5vw;
+    }
+}
+
+.custom-btn {
+    width: 130px;
+    height: 40px;
+    color: #fff;
+    border-radius: 5px;
+    padding: 10px 25px;
+    font-family: 'Lato', sans-serif;
+    font-weight: 500;
+    background: transparent;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    position: relative;
+    display: inline-block;
+    box-shadow: inset 2px 2px 2px 0px rgba(255, 255, 255, .5), 7px 7px 20px 0px rgba(0, 0, 0, .1), 4px 4px 5px 0px rgba(0, 0, 0, .1);
+    outline: none;
+}
+
+
+/* 5 */
+
+.btn-5 {
+    width: 130px;
+    height: 40px;
+    line-height: 42px;
+    padding: 0;
+    border: none;
+    background: rgb(27, 255, 0);
+    background: linear-gradient(0deg, rgba(27, 255, 0, 1) 0%, rgba(75, 251, 2, 1) 100%);
+}
+
+.btn-5:hover {
+    color: rgb(27, 255, 0);
+    background: transparent;
+    box-shadow: none;
+}
+
+.btn-5:before,
+.btn-5:after {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    height: 2px;
+    width: 0;
+    background: rgb(27, 255, 0);
+    box-shadow: -1px -1px 5px 0px #fff, 7px 7px 20px 0px #0003, 4px 4px 5px 0px #0002;
+    transition: 400ms ease all;
+}
+
+.btn-5:after {
+    right: inherit;
+    top: inherit;
+    left: 0;
+    bottom: 0;
+}
+
+.btn-5:hover:before,
+.btn-5:hover:after {
+    width: 100%;
+    transition: 800ms ease all;
+}

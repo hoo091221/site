@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <title>십진수 이진수 변환기!</title>
+    <script src="./JS/binary.js"></script>
+</head>
+
+<body>
+    <p id="log"></p>
+</body>
+<script>
+    var log = 'ok';
+    var bin = new URLSearchParams(location.href).get('bin');
+    var num = new URLSearchParams(location.href).get('num');
+
+    if (/[^0-9]/g.test(num) == false) {
+        var ans = '숫자 형식이 올바르지 않습니다. 정수 형태로 입력해 주십시오.';
+        log = '100';
+    } else if (typeof num === null || num == '') {
+        var ans = '필수 인자가 누락되어 있습니다. 요청인자를 참고해 주십시오.';
+        log = '200';
+    }
+
+    if (num != null && bin == null || bin == 'two' && log == 'ok') {
+        var ans = two(num);
+    } else if (log == 'ok' && bin == 'four' && num == 'two') {
+        var ans = four(num);
+    } else if (log == 'ok' && bin == 'eight' && num == 'two') {
+        var ans = eight(num);
+    } else if (log == 'ok' && bin == 'sixteen' && num == 'two') {
+        var ans = sixteen(num);
+    } else if (log == 'ok') {
+        var ans = '필수 인자가 누락되어 있습니다. 요청인자를 참고해 주십시오.';
+        log = '210';
+
+        if (bin != 'two' && bin != 'four' && bin != 'eight' && bin != 'sixteen') {
+            var ans = '인자의 형식이 올바르지 않습니다.';
+            log = '110';
+        }
+    }
+
+    document.getElementById('log').innerHTML = '{"result":"' + ans + '", bin":"' + bin + '", num":"' + num + '", log":"' + log + '"}';
+
+    if (log != 'ok')
+        document.getElementById('log').innerHTML = '{"result":"' + ans + '", log":"' + log + '"}';
+</script>
+
+</html>

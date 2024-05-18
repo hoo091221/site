@@ -1,0 +1,242 @@
+.title {
+    font-family: 'SejonghospitalBold';
+    font-size: 5rem;
+    color: white;
+}
+
+.subtitle {
+    font-family: 'SejonghospitalBold';
+    color: white;
+    margin-right: 30vw;
+    padding-top: 40vh;
+    font-size: 3rem;
+}
+
+.bgimg {
+    background-image: url('https://cdn.pixabay.com/photo/2014/12/11/02/55/cereals-563796_960_720.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%;
+    height: 100vh;
+    background-position: center;
+    background-attachment: fixed;
+}
+
+.darkness {
+    font-size: 10vw;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.7);
+}
+
+@font-face {
+    font-family: 'SejonghospitalBold';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2312-1@1.1/SejonghospitalBold.woff2') format('woff2');
+    font-weight: 700;
+    font-style: normal;
+}
+
+body {
+    font-family: 'SejonghospitalBold';
+    margin: 0px;
+    height: 0px;
+    -ms-overflow-style: none;
+}
+
+::-webkit-scrollbar {
+    display: none;
+}
+
+.content {
+    width: 100vw;
+    height: 100vh;
+    background-color: #FFEEDD;
+}
+
+#date {
+    /* border-radius: 3vw; */
+    font-family: 'SejonghospitalBold';
+    padding: 10px 25px;
+    width: 300px;
+    font-weight: 500;
+}
+
+.custom-btn {
+    width: 130px;
+    height: 40px;
+    color: #fff;
+    border-radius: 5px;
+    padding: 10px 25px;
+    font-family: 'Lato', sans-serif;
+    font-weight: 500;
+    background: transparent;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    position: relative;
+    display: inline-block;
+    box-shadow: inset 2px 2px 2px 0px rgba(255, 255, 255, .5), 7px 7px 20px 0px rgba(0, 0, 0, .1), 4px 4px 5px 0px rgba(0, 0, 0, .1);
+    outline: none;
+}
+
+.btn-3 {
+    background: rgb(0, 172, 238);
+    background: linear-gradient(0deg, rgba(0, 172, 238, 1) 0%, rgba(2, 126, 251, 1) 100%);
+    width: 130px;
+    height: 40px;
+    line-height: 42px;
+    padding: 0;
+    border: none;
+}
+
+.btn-3 span {
+    position: relative;
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+
+.btn-3:before,
+.btn-3:after {
+    position: absolute;
+    content: "";
+    right: 0;
+    top: 0;
+    background: rgba(2, 126, 251, 1);
+    transition: all 0.3s ease;
+}
+
+.btn-3:before {
+    height: 0%;
+    width: 2px;
+}
+
+.btn-3:after {
+    width: 0%;
+    height: 2px;
+}
+
+.btn-3:hover {
+    background: transparent;
+    box-shadow: none;
+}
+
+.btn-3:hover:before {
+    height: 100%;
+}
+
+.btn-3:hover:after {
+    width: 100%;
+}
+
+.btn-3 span:hover {
+    color: rgba(2, 126, 251, 1);
+}
+
+.btn-3 span:before,
+.btn-3 span:after {
+    position: absolute;
+    content: "";
+    left: 0;
+    bottom: 0;
+    background: rgba(2, 126, 251, 1);
+    transition: all 0.3s ease;
+}
+
+.btn-3 span:before {
+    width: 2px;
+    height: 0%;
+}
+
+.btn-3 span:after {
+    width: 0%;
+    height: 2px;
+}
+
+.btn-3 span:hover:before {
+    height: 100%;
+}
+
+.btn-3 span:hover:after {
+    width: 100%;
+}
+
+#pos,
+#menu {
+    font-family: 'SejonghospitalBold';
+}
+
+#pos {
+    font-size: 2em;
+    padding: 3vw;
+}
+
+#menu {
+    font-size: 2em;
+    padding: 3vw;
+}
+
+.c {
+    float: left;
+    box-shadow: 0 1em 1em rgba(0, 0, 255, 0.5);
+    transition: all 1s ease;
+    background: #fff;
+    margin: 3vw;
+    margin-top: 1vw;
+}
+
+.menu-content {
+    width: 35vw;
+    height: 70vh;
+}
+
+.pos-content {
+    width: 50vw;
+    height: 70vh;
+}
+
+table {
+    margin-top: 3.5em;
+}
+
+.splash-text,
+.splash-p {
+    opacity: 0;
+    transform: translateY(-100px);
+    transition: opacity 1s, transform 1s;
+    z-index: 1;
+}
+
+.c-div {
+    width: 96w;
+}
+
+.menu-content:hover,
+.pos-content:hover {
+    box-shadow: 0 1em 1em rgba(0, 179, 255, 0.5);
+}
+
+@media (width < 700px) {
+    /* 모바일 뷰포트 */
+    #date {
+        width: 50vw;
+    }
+    .menu-content,
+    .pos-content {
+        width: 90vw;
+    }
+    .c-div {
+        width: 95vw;
+    }
+    .content {
+        height: 170vh;
+    }
+}
+
+@media (width < 1000px) {
+    .title {
+        font-size: 10vw;
+    }
+    .subtitle {
+        font-size: 5vw;
+    }
+}

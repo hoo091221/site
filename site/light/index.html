@@ -1,0 +1,383 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="style.css" rel="stylesheet">
+    <title>빛의 삼원색</title>
+    <link href="light.png" rel="icon">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Jua&display=swap" rel="stylesheet">
+</head>
+<body style="background-image: url('color.jpg'); background-size: cover;">
+    <center>
+    <div style="margin-top: 5vw;" class="slidecontainer">
+        <input class="r" type="range" min="0" max="255" value="0" id="r"><!--<div class="d" id="r" style="width: 5vw; height: 5vw; border-radius: 5vw;"></div>-->
+    </div>
+    <div class="slidecontainer">
+        <input class="g" type="range" min="0" max="255" value="0" id="g"><!--<div class="d" id="g" style="width: 5vw; height: 5vw; border-radius: 5vw;"></div>-->
+    </div>
+    <div class="slidecontainer">
+        <input class="b" type="range" min="0" max="255" value="0" id="b"><!--<div class="d" id="b" style="width: 5vw; height: 5vw; border-radius: 5vw;"></div>-->
+    </div>
+    <div class="div">
+        <h1 id="log" class="log"></h1>
+    </div>
+	<div id="color" style="width: 50vw; height: 20vw; border-radius: 5vw;">
+        <h1 id="hex" class="hex"></h1>
+	</div>
+	</center>
+    <script>
+		function color() {
+			var r = document.getElementById('r').value;
+            //document.getElementById('r').style.backgroundColor = "rgb(" + r + ", 0, 0)";
+			var g = document.getElementById('g').value;
+            //document.getElementById('g').style.backgroundColor = "rgb(0, " + g + ", 0)";
+			var b = document.getElementById('b').value;
+            //document.getElementById('b').style.backgroundColor = "rgb(0, 0, " + b + ")";
+			document.getElementById('color').style.backgroundColor = "rgb(" + r + "," + g + "," + b + ")";
+            document.getElementById('log').innerHTML = "<span style='color: red'>" + r + "</span> <span style='color: green'>" + g + "</span> <span style='color: blue'>" + b + "</span>";
+            
+            var ten = r;
+            var num = 1;
+            while (ten >= num) {
+                var num = num + num;
+                var binary = "";
+            }
+            while (ten != 0) {
+                if (ten >= num) {
+                    var ten = ten - num;
+                    var binary = binary + "1";
+                    var num = num / 2;
+                } else if (ten < num) {
+                    var binary = binary + "0";
+                    var num = num / 2;
+                }
+            }
+            while (num != 0.5) {
+                 var num = num/2;
+                 var binary = binary + "0";
+            }
+            
+            var first = binary.charAt(0);
+            if (first == 0) {
+            var binary = binary.substr(1, binary.length-1);
+            }
+
+
+            var binary = binary.toString();
+            var digit = binary.length;
+            var num = 0;
+            if(digit%4 != 0){
+                var binary = "0" + binary;
+                var digit = digit + 1;
+            }
+            if(digit%4 != 0){
+                var binary = "0" + binary;
+                var digit = digit + 1;
+            }
+            if(digit%4 != 0){
+                var binary = "0" + binary;
+                var digit = digit + 1;
+            }
+            var eight = "";
+            while (num < digit) {
+                var two = binary.charAt(num) + binary.charAt(num + 1) + binary.charAt(num + 2) + binary.charAt(num + 3);
+                if (two == "0000") {
+                    var eight = eight + "0";
+                } else 
+                if (two == "0001") {
+                    var eight = eight + "1";
+                } else 
+                if (two == "0010") {
+                    var eight = eight + "2";
+                } else 
+                if (two == "0011") {
+                    var eight = eight + "3";
+                } else
+                if (two == "0100") {
+                    var eight = eight + "4";
+                } else
+                if (two == "0101") {
+                    var eight = eight + "5";
+                } else
+                if (two == "0110") {
+                    var eight = eight + "6";
+                } else
+                if (two == "0111") {
+                    var eight = eight + "7";
+                } else
+                if (two == "1000") {
+                    var eight = eight + "8";
+                } else 
+                if (two == "1001") {
+                    var eight = eight + "9";
+                } else 
+                if (two == "1010") {
+                    var eight = eight + "A";
+                } else 
+                if (two == "1011") {
+                    var eight = eight + "B";
+                } else
+                if (two == "1100") {
+                    var eight = eight + "C";
+                } else
+                if (two == "1101") {
+                    var eight = eight + "D";
+                } else
+                if (two == "1110") {
+                    var eight = eight + "E";
+                } else
+                if (two == "1111") {
+                    var eight = eight + "F";
+                }
+            var num = num + 4;
+            }
+            if (eight == "") {
+                var eight = '00';
+            }
+            var hexR = eight;
+            
+            var ten = g;
+            var num = 1;
+            while (ten >= num) {
+                var num = num + num;
+                var binary = "";
+            }
+            while (ten != 0) {
+                if (ten >= num) {
+                    var ten = ten - num;
+                    var binary = binary + "1";
+                    var num = num / 2;
+                } else if (ten < num) {
+                    var binary = binary + "0";
+                    var num = num / 2;
+                }
+            }
+            while (num != 0.5) {
+                 var num = num/2;
+                 var binary = binary + "0";
+            }
+            
+            var first = binary.charAt(0);
+            if (first == 0) {
+            var binary = binary.substr(1, binary.length-1);
+            }
+
+
+            var binary = binary.toString();
+            var digit = binary.length;
+            var num = 0;
+            if(digit%4 != 0){
+                var binary = "0" + binary;
+                var digit = digit + 1;
+            }
+            if(digit%4 != 0){
+                var binary = "0" + binary;
+                var digit = digit + 1;
+            }
+            if(digit%4 != 0){
+                var binary = "0" + binary;
+                var digit = digit + 1;
+            }
+            var eight = "";
+            while (num < digit) {
+                var two = binary.charAt(num) + binary.charAt(num + 1) + binary.charAt(num + 2) + binary.charAt(num + 3);
+                if (two == "0000") {
+                    var eight = eight + "0";
+                } else 
+                if (two == "0001") {
+                    var eight = eight + "1";
+                } else 
+                if (two == "0010") {
+                    var eight = eight + "2";
+                } else 
+                if (two == "0011") {
+                    var eight = eight + "3";
+                } else
+                if (two == "0100") {
+                    var eight = eight + "4";
+                } else
+                if (two == "0101") {
+                    var eight = eight + "5";
+                } else
+                if (two == "0110") {
+                    var eight = eight + "6";
+                } else
+                if (two == "0111") {
+                    var eight = eight + "7";
+                } else
+                if (two == "1000") {
+                    var eight = eight + "8";
+                } else 
+                if (two == "1001") {
+                    var eight = eight + "9";
+                } else 
+                if (two == "1010") {
+                    var eight = eight + "A";
+                } else 
+                if (two == "1011") {
+                    var eight = eight + "B";
+                } else
+                if (two == "1100") {
+                    var eight = eight + "C";
+                } else
+                if (two == "1101") {
+                    var eight = eight + "D";
+                } else
+                if (two == "1110") {
+                    var eight = eight + "E";
+                } else
+                if (two == "1111") {
+                    var eight = eight + "F";
+                }
+            var num = num + 4;
+            }
+            if (eight == "") {
+                var eight = '00';
+            }
+            var hexG = eight;
+            
+            var ten = b;
+            var num = 1;
+            while (ten >= num) {
+                var num = num + num;
+                var binary = "";
+            }
+            while (ten != 0) {
+                if (ten >= num) {
+                    var ten = ten - num;
+                    var binary = binary + "1";
+                    var num = num / 2;
+                } else if (ten < num) {
+                    var binary = binary + "0";
+                    var num = num / 2;
+                }
+            }
+            while (num != 0.5) {
+                 var num = num/2;
+                 var binary = binary + "0";
+            }
+            
+            var first = binary.charAt(0);
+            if (first == 0) {
+            var binary = binary.substr(1, binary.length-1);
+            }
+
+
+            var binary = binary.toString();
+            var digit = binary.length;
+            var num = 0;
+            if(digit%4 != 0){
+                var binary = "0" + binary;
+                var digit = digit + 1;
+            }
+            if(digit%4 != 0){
+                var binary = "0" + binary;
+                var digit = digit + 1;
+            }
+            if(digit%4 != 0){
+                var binary = "0" + binary;
+                var digit = digit + 1;
+            }
+            var eight = "";
+            while (num < digit) {
+                var two = binary.charAt(num) + binary.charAt(num + 1) + binary.charAt(num + 2) + binary.charAt(num + 3);
+                if (two == "0000") {
+                    var eight = eight + "0";
+                } else 
+                if (two == "0001") {
+                    var eight = eight + "1";
+                } else 
+                if (two == "0010") {
+                    var eight = eight + "2";
+                } else 
+                if (two == "0011") {
+                    var eight = eight + "3";
+                } else
+                if (two == "0100") {
+                    var eight = eight + "4";
+                } else
+                if (two == "0101") {
+                    var eight = eight + "5";
+                } else
+                if (two == "0110") {
+                    var eight = eight + "6";
+                } else
+                if (two == "0111") {
+                    var eight = eight + "7";
+                } else
+                if (two == "1000") {
+                    var eight = eight + "8";
+                } else 
+                if (two == "1001") {
+                    var eight = eight + "9";
+                } else 
+                if (two == "1010") {
+                    var eight = eight + "A";
+                } else 
+                if (two == "1011") {
+                    var eight = eight + "B";
+                } else
+                if (two == "1100") {
+                    var eight = eight + "C";
+                } else
+                if (two == "1101") {
+                    var eight = eight + "D";
+                } else
+                if (two == "1110") {
+                    var eight = eight + "E";
+                } else
+                if (two == "1111") {
+                    var eight = eight + "F";
+                }
+            var num = num + 4;
+            }
+            if (eight == "") {
+                var eight = '00';
+            }
+            var hexB = eight;
+
+            if (hexR.length == 3) {
+                var hexR = '00';
+            } else if (hexR.length == 1) {
+                var hexR = '0' + hexR;
+            }
+            if (hexG.length == 3) {
+                var hexG = '00';
+            } else if (hexG.length == 1) {
+                var hexG = '0' + hexG;
+            }
+            if (hexB.length == 3) {
+                var hexB = '00';
+            } else if (hexB.length == 1) {
+                var hexB = '0' + hexB;
+            }
+
+            if (r == 0) {
+                var hexR = '00';
+            }
+            if (g == 0) {
+                var hexG = '00';
+            }
+            if (b == 0) {
+                var hexB = '00';
+            }
+            document.getElementById('hex').innerHTML = '#' + hexR + hexG + hexB;
+
+
+            if (r + g + b <= 70070070) {
+                document.getElementById('hex').style.color = '#FFFFFF';
+            } else {
+                document.getElementById('hex').style.color = '#000000';
+            }
+        }
+        window.onload = function(){
+            color();
+            setInterval(color,1);
+        }
+    </script>
+</body>
+</html>
