@@ -11,6 +11,8 @@
     font-family: "NanumSquareNeo-Variable";
     height: 17vw;
     font-size: 1.3vw;
+    z-index: 10;
+    position:relative;
 }
 
 .footer-hr {

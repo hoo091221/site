@@ -1,5 +1,9 @@
 /* 배경 꽉 채우기 */
 
+body {
+	background: #ddd;
+}
+
 .full {
     width: 100%;
     /* height: 100vh; */

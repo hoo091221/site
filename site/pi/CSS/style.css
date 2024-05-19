@@ -118,12 +118,8 @@ input {
     transition-timing-function: linear;
     transform: infinite;
 }
-
-button {
-    margin: 20px;
-}
-
 .custom-btn {
+    margin: 20px;
     width: 20vw;
     height: 6vw;
     color: #fff;

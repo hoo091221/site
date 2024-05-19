@@ -38,6 +38,9 @@ var num = bg() - 3;
 document.getElementById('bgdiv-2').style.backgroundImage = "url('./img/bgimg/bgimg_" + num + ".png')";
 
 var num = dobg();
-document.getElementById('bgdiv-do').style.backgroundImage = "url('./img/bgimg/doing/bgimg_" + num + ".png')";
+document.getElementById('bgdiv-do').style.backgroundImage = "url('./../img/bgimg/doing/bgimg_" + num + ".png')";
+
+var num = bg() - 1;
+document.getElementById('bgdiv-end').style.backgroundImage = "url('./../img/bgimg/bgimg_" + num + ".png')";
 
 // astrogistmonamegistos
