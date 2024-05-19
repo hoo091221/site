@@ -43,11 +43,11 @@ body {
 /* 범위 지정 색상 변경 */
 
 ::-moz-selection {
-    background: #b0c0fd;
+    background: rgba(100,100,255,0.5);
     color: #000;
 }
 
 ::selection {
-    background: #b0c0fd;
+    background: rgba(100,100,255,0.5);
     color: #000;
 }

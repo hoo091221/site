@@ -25,23 +25,13 @@ document.querySelectorAll('.button').forEach(button => {
 
     button.addEventListener('click', e => {
         
+        document.getElementById('dnload').click();
+
         e.preventDefault();
 
         if(!button.classList.contains('loading')) {
 
             button.classList.add('loading');
-
-            gsap.to(svgPath, {
-                smoothing: .3,
-                duration: duration * .065 / 1000
-            });
-
-            gsap.to(svgPath, {
-                y: 12,
-                duration: duration * .265 / 1000,
-                delay: duration * .065 / 1000,
-                ease: Elastic.easeOut.config(1.12, .4)
-            });
 
             setTimeout(() => {
                 svg.innerHTML = getPath(0, 0, [
@@ -75,11 +65,10 @@ function getPoint(point, i, a, smoothing) {
 }
 
 function getPath(update, smoothing, pointsNew) {
-    let points = pointsNew ? pointsNew : [
+        d = pointsNew ? pointsNew : [
             [4, 12],
             [12, update],
             [20, 12]
-        ],
-        d = points.reduce((acc, point, i, a) => i === 0 ? `M ${point[0]},${point[1]}` : `${acc} ${getPoint(point, i, a, smoothing)}`, '');
+        ].reduce((acc, point, i, a) => i === 0 ? `M ${point[0]},${point[1]}` : `${acc} ${getPoint(point, i, a, smoothing)}`, '');
     return `<path d="${d}" />`;
 }

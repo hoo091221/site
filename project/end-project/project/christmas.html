@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <!-- 타이틀 -->
+    <title>포트폴리오!</title>
+    <link href="./../../../img/icon/gift-solid.svg" rel="icon" />
+    <!-- Fontawesome -->
+    <script src="https://kit.fontawesome.com/90a3894fee.js" crossorigin="anonymous"></script>
+    <!-- 모바일 뷰포트 -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- CSS -->
+    <link href="./../../../CSS/style.css" rel="stylesheet" />
+    <link href="./../../../CSS/title.css" rel="stylesheet" />
+    <link href="./../../../CSS/background.css" rel="stylesheet" />
+    <link href="./../../../CSS/cards.css" rel="stylesheet" />
+    <link href="./../../../CSS/download.css" rel="stylesheet" />
+    <link href="./../../../CSS/footer.css" rel="stylesheet" />
+    <!-- Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous" />
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+        crossorigin="anonymous"></script>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Jua&display=swap" rel="stylesheet" />
+    <style>
+        .a {
+            color: #555;
+            text-decoration: none;
+            font-weight: bold;
+        }
+    </style>
+</head>
+
+<!-- body start -->
+
+<body style="background-color: #ddd">
+    <!-- navbar -->
+
+    <nav class="navbar bg-body-tertiary fixed-top">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="./../../../index.html">
+                <img src="./../../../img/icon/gift-solid.svg" alt="Logo" width="30" height="24"
+                    class="d-inline-block align-text-top" /> 포트폴리오!</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar"
+                aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar"
+                aria-labelledby="offcanvasNavbarLabel">
+                <div class="offcanvas-header">
+                    <h5 class="offcanvas-title" id="offcanvasNavbarLabel">포트폴리오!</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                </div>
+                <div class="offcanvas-body">
+                    <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="./../../../index.html">메인 화면</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">후원하기</a>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                                aria-expanded="false">
+                                프로젝트
+                            </a>
+                            <ul class="dropdown-menu">
+                                <li><a class="dropdown-item" href="./../../doing-project/index.html">진행중인 프로젝트</a></li>
+                                <li><a class="dropdown-item" href="./../../end-project/index.html">완성된 프로젝트</a></li>
+                                <li>
+                                    <hr class="dropdown-divider" />
+                                </li>
+                                <li>
+                                    <a class="dropdown-item" href="#">삭제된 프로젝트</a>
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
+                    <form class="d-flex mt-3" role="search">
+                        <input class="form-control me-2" type="search" placeholder="프로젝트명..." aria-label="Search" />
+                        <button class="btn btn-outline-success" type="submit" style='width: 7rem'>검색</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- 배경화면 -->
+
+    <div class="bgimg"
+        style="background: url('./../../../img/bgimg/bgimg_3.png');background-position: center;background-size:cover;background-attachment: fixed;">
+        <div class="op_5 full">
+            <h1 class="title splash-text">크리스마스!</h1>
+        </div>
+    </div>
+    <br>
+
+    <!-- 설명란 -->
+
+    <video style="float:right;margin: 1vw;width: 50vw" controls>
+        <source src="./../../../video/christmas.mp4" type="video/mp4" />
+    </video>
+
+    <!-- 텍스트 -->
+
+    <h1 style="margin-left: 1vw;">크리스마스!</h1>
+    <p style="margin-left: 1vw;">특정 노래를 가지고 가사를 표현하는 영상을 마인크래프트로 제작해보았습니다.<br>
+        노래 제목은 'SG워너비' & '브라운아이드걸스' 의 'MUST HAVE LOVE'라는 노래입니다.
+    </p>
+    <p style="margin-left: 1vw;">제작 기간 : 2023년 7월 ~ 12월</p>
+    <h1 style="margin-left: 1vw;">비하인드</h1>
+    <p style="margin-left: 1vw;">
+        원래의 목적은 '마인크래프트' 게임 내에서가 아닌,<br>에프터 이펙트를 이용한 '모션그래픽' 으로 작업하려 했습니다.<br>
+        하지만 크리스마스 트리가 클로즈업되는 장면까지 만든 후 (영상의 33초 부분)<br>생각해둔 완벽한 구도를 표현하기엔 경험이 부족하다 느꼈고,<br>
+        '마인크래프트'에서 이어서 만들게 되었습니다.<br>
+        <br>
+        <a class="a" target="_blank" href="https://www.instagram.com/reel/C7HV5ikvml3/?igsh=MWh0Y2dlMnY1NGU1bg%3D%3D">
+            인스타그램</a>에서, 원래 2절까지 업로드 예정이었으나 릴스의 길이 제한으로<br>
+        겹치는 부분이 많은 2절을 잘라내고 1절까지만 업로드되었습니다.<br>
+        <br>
+        저 영상을 작업하면서 가장 많이 들은 노래는 반야심경 리믹스입니다. <del style="color: #999">종교 대통합</del><br>
+        <br>
+        인스타그램에서 해당 노래의 원본이 사라지며, 재업로드하며 반주로 바뀌었습니다.<br>
+        <br>
+        맵과 데이터팩은 배포하지 않으니 이용에 참고 바랍니다.<br>
+        따라서 배포하는 리소스팩에는 글씨체, 기차 모델링, 음원 등이 들어있습니다.<br>
+        <br>
+        글씨체 출처 : <a class="a" target="_blank" href="https://noonnu.cc/font_page/1141">'눈누'에서 제공하는 '도스필기체'</a>
+    </p>
+    <table>
+        <tr>
+            <td>
+                <center>
+                    <iframe src="https://www.youtube.com/embed/df9_a4ySCcE" title="반야심경 리믹스" frameborder="0"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                        referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                    <p style="color:#aaa"><i>반야심경 리믹스</i><br></p>
+                </center>
+            </td>
+            <td>
+                <center>
+                    <iframe src="https://www.youtube.com/embed/_RFdjrKyGqY"
+                        title="SG워너비, 브라운아이드걸스 - Must Have Love [가사/Lyrics]" frameborder="0"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                        referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                    <p style="color:#aaa"><i>SG워너비&브라운아이드걸스 - MUST HAVE LOVE</i><br></p>
+                </center>
+            </td>
+        </tr>
+    </table>
+
+    <!-- download -->
+
+    <div class="container">
+
+        <a class="button dark">
+            <ul>
+                <li>&#68;ownload</li>
+                <li>&#68;ownloading</li>
+                <li>Open File</li>
+            </ul>
+            <div>
+                <svg viewBox="0 0 24 24"></svg>
+            </div>
+        </a>
+
+    </div>
+
+    <a id="dnload" href="./../../../download/christmas/pack.zip" download></a> <!-- 경로 설정은 여기에 -->
+
+    <!-- dribbble -->
+    <a class="dribbble" href="https://dribbble.com/shots/7299868-Download-Buttons" target="_blank"><img
+            src="https://cdn.dribbble.com/assets/dribbble-ball-mark-2bd45f09c2fb58dbbfb44766d5d1d07c5a12972d602ef8b32204d28fa3dda554.svg"
+            alt=""></a>
+    <!-- footer -->
+
+    <footer class="footer">
+        <center>
+            <div class="footer-div">
+                <p class="footer-center">© 2024 All rights reserved.</p>
+                <a target="_blank" style="text-decoration: none; color: #717171"
+                    href="https://hoo091221.github.io/site/nomo">NOMO</a>
+                |
+                <a target="_blank" style="text-decoration: none; color: #717171"
+                    href="https://hoo091221.github.io/site/lunch">거제중학교 급식</a>
+                |
+                <a target="_blank" style="text-decoration: none; color: #717171"
+                    href="https://hoo091221.github.io/site/binary">이진수 계산기</a>
+                |
+                <a target="_blank" style="text-decoration: none; color: #717171"
+                    href="https://hoo091221.github.io/site/light">빛의 삼원색</a>
+                |
+                <a target="_blank" style="text-decoration: none; color: #717171"
+                    href="https://hoo091221.github.io/site/pi">원주율</a>
+                <center>
+                    <hr class="footer-hr" />
+                </center>
+                <p class="footer-left">
+                    이메일 hoo091221@gmail.com
+                    <br />
+                    <a href="https://www.instagram.com/hoo_091221" style="color: #717171; text-decoration: none">인스타그램
+                        @hoo_091221</a>
+                    <br />이 사이트는 여러분의 개인정보를 수집하지 않습니다. <br />image
+                    copyright
+                    <a href="https://www.pixabay.com" style="color: #717171; text-decoration: none">www.pixabay.com</a>
+                </p>
+            </div>
+        </center>
+    </footer>
+
+    <!-- JS -->
+    <script src="./../../../JS/bgimg.js" rel="text/javascript"></script>
+    <script src="./../../../JS/ani1.js" rel="text/javascript"></script>
+    <script src="./../../../JS/download.js" rel="text/javascript"></script>
+
+    <!-- Copyright (c) 2024 by Aaron Iker (https://codepen.io/aaroniker/pen/MWgNKGr)
+
+Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
+ -->
+</body>
+
+</html>
