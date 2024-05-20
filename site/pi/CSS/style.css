@@ -82,7 +82,7 @@ input {
 }
 
 .bd {
-    height: 75vh;
+    height: 30vw;
     box-shadow: 0 1em 1em rgba(50, 50, 50, 0.8);
     transition: all 1s ease;
     background: #fff;
@@ -198,7 +198,7 @@ input::-webkit-inner-spin-button {
         font-size: 5vw;
     }
     .bd {
-        height: 35vh;
+        height: 50vw;
         margin-top: 2vh;
     }
     .ptitle {
