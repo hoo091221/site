@@ -1,47 +1,25 @@
-```
-┌───────────────────────────────────────────────┐
-                                       _       
-     __ _  ___   ___  _ __ _ __ ___   (_) ___  
-    / _` |/ _ \ / _ \| '__| '_ ` _ \  | |/ _ \ 
-   | (_| | (_) | (_) | |  | | | | | |_| | (_) |
-    \__, |\___/ \___/|_|  |_| |_| |_(_)_|\___/ 
-    |___/                                      
-			     🌩 𝘼𝙣𝙮𝙤𝙣𝙚 𝙘𝙖𝙣 𝙙𝙚𝙫𝙚𝙡𝙤𝙥!
-└───────────────────────────────────────────────┘
-```
+# [포트폴리오!](http://hoo091221.github.io).
+##### [hoo091221.github.io](http://hoo091221.github.io).
 
-# goormIDE
-Welcome to goormIDE!
+포트폴리오를 보러 오신 여러분 모두 환영합니다!
 
-goormIDE is a powerful cloud IDE service to maximize productivity for developers and teams.  
-**DEVELOP WITH EXCELLENCE**  
+포트폴리오는 그동안 개발했던 프로그램, 사이트, 프로젝트 등 많은 자료를 포함하고 있는 하나의 웹사이트입니다.
+**여기에서 제 작품을 둘러보세요!**
 
-`Happy coding! The goormIDE team`
+`여기까지 기본적인 소개였습니다. 감사합니다.`
 
+## 용어 정리 🛠️
 
-## 🔧 Tip & Guide
+* 프로젝트
+	* `포트폴리오`에서 정의하는 `프로젝트`란, 결과물로 산출된 하나의 동영상과 그 동영상으로부터 종속된 자료 등을 통틀어 이르는 말입니다.
+	* `프로젝트`의 동영상은 [인스타그램](https://www.instagram.com/hoo_093333). 에서 감상하실 수 있습니다.
+ 
+* 사이드 프로젝트
+	* `포트폴리오`에서의 `프로젝트`를 제외한 다른 작품을 말합니다.
+ 	`예) 사이트, 프로그램 등`
+	* 프로젝트와 가장 큰 차이점은 동영상이 아닌 여러 가지 형태의 결과물이 산출됩니다.
+	`사이트 프로젝트는 인스타그램에 올라오지 않아요!`
 
-* Command feature
-	* You can simply run your script using the shortcut icons on the top right.
-	* Check out `PROJECT > Common/Build/Run/Test/Find Command` in the top menu.
-	
-* Get URL and Port
-	* Click `PROJECT > URL/PORT` in top menu bar.
-	* You can get default URL/Port and add URL/Port in the top menu.
+## 버그 제보 📮
 
-* Useful shortcut
-	
-| Shortcuts name     | Command (Mac) | Command (Window) |
-| ------------------ | :-----------: | :--------------: |
-| Copy in Terminal   | ⌘ + C         | Ctrl + Shift + C |
-| Paste in Terminal  | ⌘ + V         | Ctrl + Shift + V |
-| Search File        | ⌥ + ⇧ + F     | Alt + Shift + F  |
-| Terminal Toggle    | ⌥ + ⇧ + B     | Alt + Shift + B  |
-| New Terminal       | ⌥ + ⇧ + T     | Alt + Shift + T  |
-| Code Formatting    | ⌥ + ⇧ + P     | Alt + Shift + P  |
-| Show All Shortcuts | ⌘ + H         | Ctrl + H         |
-
-## 💬 Support & Documentation
-
-Visit [https://ide.goorm.io](https://ide.goorm.io) to support and learn more about using goormIDE.  
-To watch some usage guides, visit [https://help.goorm.io/en/goormide](https://help.goorm.io/en/goormide)
+버그 제보는 이메일(hoo091221@gmail.com) 또는 [인스타그램](https://www.instagram.com/hoo_093333).으로 부탁드려요!
