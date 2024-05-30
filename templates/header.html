@@ -1,0 +1,95 @@
+<!-- navbar -->
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<header class="--header" th:fragment="header">
+    <nav class="navbar fixed-top" data-bs-theme="dark">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">
+                <img src="./img/icon/gift-solid.svg" alt="Logo" width="30" height="24" class="d-inline-block align-text-top" style="filter: invert(70%);" /> 포트폴리오!
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
+                <div class="offcanvas-header">
+                    <h5 class="offcanvas-title" id="offcanvasNavbarLabel">포트폴리오!</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                </div>
+                <div class="offcanvas-body">
+                    <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="#">메인 화면</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="./donate.html">후원하기</a>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                프로젝트
+                            </a>
+                            <ul class="dropdown-menu">
+                                <li><a class="dropdown-item" href="./project/doing-project/index.html">진행중인 프로젝트</a>
+                                </li>
+                                <li><a class="dropdown-item" href="./project/end-project/index.html">완성된 프로젝트</a></li>
+                                <li>
+                                    <hr class="dropdown-divider" />
+                                </li>
+                                <li>
+                                    <a class="dropdown-item" href="#">삭제된 프로젝트</a>
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
+                    <!-- search form -->
+                    <form class="d-flex mt-3 searchBox" role="search" id="searchBox">
+                        <input class="form-control me-2" type="search" placeholder="프로젝트명..." onkeyup="filter()" aria-label="Search" id="search" />
+                        <button class="btn btn-outline-success" type="submit" style='width: 7rem'>검색</button>
+                    </form>
+                    <!-- search result -->
+                    <div class="listBox">
+                        <div class="listInner">
+                            <a href="./project/end-project/project/GJschool.html" class="project">거제중학교</a>
+                        </div>
+                        <div class="listInner">
+                            <a class="project">노트</a>
+                        </div>
+                        <div class="listInner">
+                            <a class="project">크리스마스</a>
+                        </div>
+                        <div class="listInner">
+                            <a class="project">노트블럭</a>
+                        </div>
+                        <div class="listInner">
+                            <a class="project">모션그래픽</a>
+                        </div>
+                        <div class="listInner">
+                            <a class="project">마인크래프트 얼불춤</a>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- search scripts -->
+
+    <script>
+        function filter() {
+            let search = document.getElementById("search").value.toLowerCase();
+            let listInner = document.getElementsByClassName("listInner");
+
+            for (let i = 0; i < listInner.length; i++) {
+                project = listInner[i].getElementsByClassName("project");
+                if (project[0].innerHTML.toLowerCase().indexOf(search) != -1) {
+                    listInner[i].style.display = "flex"
+                } else {
+                    listInner[i].style.display = "none"
+                }
+            }
+        }
+    </script>
+
+</header>
+
+</html>

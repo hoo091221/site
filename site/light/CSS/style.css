@@ -1,0 +1,114 @@
+@font-face {
+    font-family: 'TTLaundryGothicB';
+    src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/2403-2@1.0/TTLaundryGothicB.woff2') format('woff2');
+    font-weight: 700;
+    font-style: normal;
+}
+
+.title {
+    font-family: 'TTLaundryGothicB';
+    font-size: 5rem;
+    color: white;
+}
+
+.subtitle {
+    font-family: 'TTLaundryGothicB';
+    color: white;
+    margin-right: 30vw;
+    padding-top: 40vh;
+    font-size: 3rem;
+}
+
+.bgimg {
+    background-image: url('./../img/color.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%;
+    height: 100vh;
+    background-position: center;
+    background-attachment: fixed;
+}
+
+.bd {
+    height: 50vw;
+    box-shadow: 0 1em 1em rgba(50, 50, 50, 0.8);
+    transition: all 1s ease;
+    background: #fff;
+    margin: 3vw;
+    padding: 3vw;
+    border-radius: 2vw;
+}
+
+.darkness {
+    font-size: 10vw;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.7);
+}
+
+.r {
+    accent-color: red;
+}
+
+.g {
+    accent-color: green;
+}
+
+.b {
+    accent-color: blue;
+}
+
+input {
+    width: 50vw;
+    height: 2vw;
+}
+
+.d {
+    float: left;
+    margin-left: 0vw;
+}
+
+h1 {
+    font-family: 'TTLaundryGothicB';
+}
+
+.div {
+    width: 50vw;
+    height: 5vw;
+    border-radius: 1vw;
+    background-color: rgba(255, 255, 255, 0.7);
+    margin-bottom: 2.5vw;
+}
+
+::-webkit-scrollbar {
+    display: none;
+}
+
+
+/*특정 부분 스크롤바 없애기*/
+
+body {
+    -ms-overflow-style: none;
+}
+
+body::-webkit-scrollbar {
+    display: none;
+}
+
+.splash-text,
+.splash-p,
+.splash-btn {
+    opacity: 0;
+    transform: translateY(-100px);
+    transition: opacity 1s, transform 1s;
+    z-index: 1;
+}
+
+@media (width < 1000px) {
+    .title {
+        font-size: 10vw;
+    }
+    .subtitle {
+        font-size: 5vw;
+    }
+}

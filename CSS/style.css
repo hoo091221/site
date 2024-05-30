@@ -1,7 +1,7 @@
 /* 배경 꽉 채우기 */
 
 body {
-	background: #ddd;
+    background: #ddd;
 }
 
 .full {
@@ -16,10 +16,7 @@ body {
     scroll-snap-align: start;
 }
 
-.op_5 {
-    /* snap-scroll-type: y mandatory; */
-    scroll-snap-type: y mandatory;
-}
+
 /* 글씨체 적용 */
 
 h1,
@@ -47,11 +44,24 @@ body {
 /* 범위 지정 색상 변경 */
 
 ::-moz-selection {
-    background: rgba(100,100,255,0.5);
+    background: rgba(100, 100, 255, 0.5);
     color: #000;
 }
 
 ::selection {
-    background: rgba(100,100,255,0.5);
+    background: rgba(100, 100, 255, 0.5);
     color: #000;
+}
+
+.listInner {
+    padding: 2px 0px 2px 0px;
+}
+
+.listInner:first-child {
+    padding-top: 10px;
+}
+
+.project {
+    color: #fff;
+    text-decoration: none;
 }

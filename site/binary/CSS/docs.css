@@ -1,0 +1,127 @@
+@font-face {
+    font-family: 'ONE-Mobile-Title';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2105_2@1.0/ONE-Mobile-Title.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'intelone-mono-font-family-regular';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2307-1@1.1/intelone-mono-font-family-regular.woff2') format('woff2');
+    font-weight: 400;
+    font-style: normal;
+}
+
+.int-area {
+    width: 400px;
+    position: relative;
+    position: relative;
+}
+
+h1 {
+    font-family: 'ONE-Mobile-Title';
+    padding: 2vw;
+}
+
+h3 {
+    font-family: 'ONE-Mobile-Title';
+    font-size: 3vw;
+}
+
+::selection {
+    background: #4444CC;
+    color: #fff;
+}
+
+.sh {
+    box-shadow: 0 1em 1em rgba(0, 0, 0, 0.5);
+}
+
+.highlight {
+    background: #222;
+    border-radius: 0.5vw;
+    line-height: 1.5vw;
+    text-align: center;
+    overflow: auto;
+    white-space: nowrap;
+    padding: 1vw 4vw 1vw 1vw;
+    height: 5vw;
+}
+
+td {
+    width: 50vw;
+}
+
+.tb::-webkit-scrollbar {
+    display: none;
+}
+
+.h3 {
+    margin: 2vw;
+    color: #555;
+    float: left;
+    width: 22vw;
+}
+
+.all {
+    width: 60vw;
+}
+
+.highlight::-webkit-scrollbar {
+    height: 10px;
+}
+
+.highlight::-webkit-scrollbar-thumb {
+    background-color: #2f3542;
+    border-radius: 100vw;
+    background: #999;
+}
+
+.highlight::-webkit-scrollbar-track {
+    background-color: rgba(0, 0, 0, 0);
+}
+
+.language-html {
+    font-size: 1.5vw;
+    font-family: 'intelone-mono-font-family-regular';
+}
+
+.y {
+    color: moccasin;
+}
+
+.g {
+    color: gold;
+}
+
+.gr {
+    color: #aaffaa;
+}
+
+.w {
+    color: #999;
+}
+
+.b {
+    color: lightskyblue;
+}
+
+.p {
+    color: red;
+}
+
+.nt {
+    color: red;
+}
+
+.o {
+    color: #999;
+}
+
+.na {
+    color: orange;
+}
+
+.s {
+    color: limegreen;
+}
