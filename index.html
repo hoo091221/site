@@ -21,6 +21,23 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Jua&display=swap" rel="stylesheet" />
+    
+    <script>
+        function filter() {
+            let search = document.getElementById("search").value.toLowerCase();
+            let listInner = document.getElementsByClassName("listInner");
+
+            for (let i = 0; i < listInner.length; i++) {
+                project = listInner[i].getElementsByClassName("project");
+                if (project[0].innerHTML.toLowerCase().indexOf(search) != -1) {
+                    listInner[i].style.display = "flex"
+                } else {
+                    listInner[i].style.display = "none"
+                }
+            }
+        }
+    </script>
+
 </head>
 
 <!-- body start -->
