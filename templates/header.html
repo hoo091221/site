@@ -1,8 +1,24 @@
+
+<script>
+    function filter() {
+        let search = document.getElementById("search").value.toLowerCase();
+        let listInner = document.getElementsByClassName("listInner");
+
+        for (let i = 0; i < listInner.length; i++) {
+            project = listInner[i].getElementsByClassName("project");
+            if (project[0].innerHTML.toLowerCase().indexOf(search) != -1) {
+                listInner[i].style.display = "flex"
+            } else {
+                listInner[i].style.display = "none"
+            }
+        }
+    }
+</script>
 <header class="header">
     <nav class="navbar fixed-top" data-bs-theme="dark">
         <div class="container-fluid">
             <a class="navbar-brand" href="#">
-                <img src="./img/icon/gift-solid.svg" alt="Logo" width="30" height="24" class="d-inline-block align-text-top" style="filter: invert(70%);" /> 포트폴리오!
+                <img src="https://hoo091221.github.io/img/icon/gift-solid.svg" alt="Logo" width="30" height="24" class="d-inline-block align-text-top" style="filter: invert(70%);" /> 포트폴리오!
             </a>
             <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
@@ -45,22 +61,22 @@
                     <!-- search result -->
                     <div class="listBox">
                         <div class="listInner">
-                            <a href="./project/end-project/project/GJschool.html" class="project">거제중학교</a>
+                            <a data-tag-href="/project/end-project/project/GJschool.html" class="project">거제중학교</a>
                         </div>
                         <div class="listInner">
-                            <a class="project">노트</a>
+                            <a data-tag-href="/project/end-project/project/note.html" class="project">노트</a>
                         </div>
                         <div class="listInner">
-                            <a class="project">크리스마스</a>
+                            <a data-tag-href="/project/end-project/project/christmas.html" class="project">크리스마스</a>
                         </div>
                         <div class="listInner">
-                            <a class="project">노트블럭</a>
+                            <a data-tag-href="/project/end-project/project/noteblock.html" class="project">노트블럭 프로젝트</a>
                         </div>
                         <div class="listInner">
-                            <a class="project">모션그래픽</a>
+                            <a data-tag-href="/project/doing-project/project/motion.html" class="project">모션그래픽</a>
                         </div>
                         <div class="listInner">
-                            <a class="project">마인크래프트 얼불춤</a>
+                            <a data-tag-href="/project/doing-project/project/a_dancd_of_fire_and_ice.html" class="project">마인크래프트 얼불춤</a>
                         </div>
                     </div>
 
@@ -70,5 +86,18 @@
     </nav>
 
     <!-- search scripts -->
+    <script>
+            // include.js
+            window.addEventListener('load', function() {
+                var allElements = document.getElementsByTagName('*');
+                Array.prototype.forEach.call(allElements, function(el) {
+                    var tagHref = el.dataset.tagHref;
+                    if (tagHref) {
+                        el.href = `https://${window.location.host}${tagHref}`;
+                        console.log(el.href);
+                    }
+                });
+            });
+        </script>
 
 </header>
