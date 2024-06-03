@@ -23,64 +23,14 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Jua&display=swap" rel="stylesheet" />
-    <style>
-        .a {
-            color: #555;
-            text-decoration: none;
-            font-weight: bold;
-        }
-    </style>
 </head>
 
 <!-- body start -->
 
 <body style="background-color: #ddd">
-    <!-- navbar -->
 
-    <nav class="navbar bg-body-tertiary fixed-top">
-        <div class="container-fluid">
-            <a class="navbar-brand" href="./../../../index.html">
-                <img src="./../../../img/icon/gift-solid.svg" alt="Logo" width="30" height="24" class="d-inline-block align-text-top" /> 포트폴리오!</a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
-                <div class="offcanvas-header">
-                    <h5 class="offcanvas-title" id="offcanvasNavbarLabel">포트폴리오!</h5>
-                    <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
-                </div>
-                <div class="offcanvas-body">
-                    <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
-                        <li class="nav-item">
-                            <a class="nav-link active" aria-current="page" href="./../../../index.html">메인 화면</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#">후원하기</a>
-                        </li>
-                        <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                                프로젝트
-                            </a>
-                            <ul class="dropdown-menu">
-                                <li><a class="dropdown-item" href="./../../doing-project/index.html">진행중인 프로젝트</a></li>
-                                <li><a class="dropdown-item" href="./../../end-project/index.html">완성된 프로젝트</a></li>
-                                <li>
-                                    <hr class="dropdown-divider" />
-                                </li>
-                                <li>
-                                    <a class="dropdown-item" href="#">삭제된 프로젝트</a>
-                                </li>
-                            </ul>
-                        </li>
-                    </ul>
-                    <form class="d-flex mt-3" role="search">
-                        <input class="form-control me-2" type="search" placeholder="프로젝트명..." aria-label="Search" />
-                        <button class="btn btn-outline-success" type="submit" style='width: 7rem'>검색</button>
-                    </form>
-                </div>
-            </div>
-        </div>
-    </nav>
+    <!-- header -->
+    <div data-include-path="templates/header.html"></div>
 
     <!-- 배경화면 -->
 

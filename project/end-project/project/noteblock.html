@@ -35,52 +35,9 @@
 <!-- body start -->
 
 <body style="background-color: #ddd">
-    <!-- navbar -->
 
-    <nav class="navbar bg-body-tertiary fixed-top">
-        <div class="container-fluid">
-            <a class="navbar-brand" href="./../../../index.html">
-                <img src="./../../../img/icon/gift-solid.svg" alt="Logo" width="30" height="24" class="d-inline-block align-text-top" /> 포트폴리오!</a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
-                <div class="offcanvas-header">
-                    <h5 class="offcanvas-title" id="offcanvasNavbarLabel">포트폴리오!</h5>
-                    <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
-                </div>
-                <div class="offcanvas-body">
-                    <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
-                        <li class="nav-item">
-                            <a class="nav-link active" aria-current="page" href="./../../../index.html">메인 화면</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#">후원하기</a>
-                        </li>
-                        <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                                프로젝트
-                            </a>
-                            <ul class="dropdown-menu">
-                                <li><a class="dropdown-item" href="./../../doing-project/index.html">진행중인 프로젝트</a></li>
-                                <li><a class="dropdown-item" href="./../../end-project/index.html">완성된 프로젝트</a></li>
-                                <li>
-                                    <hr class="dropdown-divider" />
-                                </li>
-                                <li>
-                                    <a class="dropdown-item" href="#">삭제된 프로젝트</a>
-                                </li>
-                            </ul>
-                        </li>
-                    </ul>
-                    <form class="d-flex mt-3" role="search">
-                        <input class="form-control me-2" type="search" placeholder="프로젝트명..." aria-label="Search" />
-                        <button class="btn btn-outline-success" type="submit" style='width: 7rem'>검색</button>
-                    </form>
-                </div>
-            </div>
-        </div>
-    </nav>
+    <!-- header -->
+    <div data-include-path="templates/header.html"></div>
 
     <!-- 배경화면 -->
 
@@ -151,32 +108,10 @@
 
     <!-- dribbble -->
     <a class="dribbble" href="https://dribbble.com/shots/7299868-Download-Buttons" target="_blank"><img src="https://cdn.dribbble.com/assets/dribbble-ball-mark-2bd45f09c2fb58dbbfb44766d5d1d07c5a12972d602ef8b32204d28fa3dda554.svg" alt=""></a>
-    <!-- footer -->
 
-    <footer class="footer">
-        <center>
-            <div class="footer-div">
-                <p class="footer-center">© 2024 All rights reserved.</p>
-                <a target="_blank" style="text-decoration: none; color: #C1C1C1" href="https://hoo091221.github.io">포트폴리오!</a> |
-                <a target="_blank" style="text-decoration: none; color: #717171" href="https://hoo091221.github.io/site/nomo">NOMO</a> |
-                <a target="_blank" style="text-decoration: none; color: #717171" href="https://hoo091221.github.io/site/lunch">거제중학교 급식</a> |
-                <a target="_blank" style="text-decoration: none; color: #717171" href="https://hoo091221.github.io/site/binary">이진수 계산기</a> |
-                <a target="_blank" style="text-decoration: none; color: #717171" href="https://hoo091221.github.io/site/light">빛의 삼원색</a> |
-                <a target="_blank" style="text-decoration: none; color: #717171" href="https://hoo091221.github.io/site/pi">원주율</a>
-                <center>
-                    <hr class="footer-hr" />
-                </center>
-                <p class="footer-left">
-                    이메일 hoo091221@gmail.com
-                    <br />
-                    <a href="https://www.instagram.com/hoo_091221" style="color: #717171; text-decoration: none">인스타그램
-                        @hoo_091221</a>
-                    <br />이 사이트는 여러분의 개인정보를 수집하지 않습니다. <br />image copyright
-                    <a href="https://www.pixabay.com" style="color: #717171; text-decoration: none">www.pixabay.com</a>
-                </p>
-            </div>
-        </center>
-    </footer>
+
+    <!-- footer -->
+    <div data-include-path="templates/footer.html"></div>
 
     <!-- JS -->
     <script src="./../../../JS/bgimg.js" rel="text/javascript"></script>
