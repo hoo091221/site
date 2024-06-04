@@ -152,9 +152,8 @@
             <!-- 사이트 접속 배경화면 -->
 
             <div class="slides">
-                <h1 class="title">사이트 바로가기</h1>
+                <h1 class="title" style="z-index: 10">사이트 바로가기</h1>
             </div>
-            <!-- <a href="https://nomostudy.netlify.app"></a> -->
 
             <!-- 사이트 바로가기창 -->
             <div class="slides">
@@ -179,7 +178,7 @@
                                 <iframe src="https://hoo091221.github.io/site/lunch"></iframe>
                                 <div class="card-body">
                                     <a href="https://hoo091221.github.io/site/lunch" style="text-decoration: none; color: black;">
-                                        <p class="card-text">학교 급식 메뉴</p>
+                                        <a href="https://hoo091221.github.io/site/pi" class="card-text">학교 급식 메뉴</a>
                                     </a>
                                 </div>
                             </div>
@@ -192,7 +191,7 @@
                                 <iframe src="https://hoo091221.github.io/site/binary"></iframe>
                                 <div class="card-body">
                                     <a href="https://hoo091221.github.io/site/lunch" style="text-decoration: none; color: black;">
-                                        <p class="card-text">진법변환기</p>
+                                        <a href="https://hoo091221.github.io/site/pi" class="card-text">진법변환기</a>
                                     </a>
                                 </div>
                             </div>
@@ -204,7 +203,7 @@
                             <div class="card scroll-text" style="width: 18rem; z-index: 0">
                                 <iframe src="https://hoo091221.github.io/site/light"></iframe>
                                 <div class="card-body">
-                                    <p class="card-text">빛의 삼원색</p>
+                                    <a href="https://hoo091221.github.io/site/pi" class="card-text">빛의 삼원색</a>
                                 </div>
                             </div>
                         </div>
@@ -215,7 +214,18 @@
                             <div class="card scroll-text" style="width: 18rem; z-index: 0">
                                 <iframe src="https://hoo091221.github.io/site/pi"></iframe>
                                 <div class="card-body">
-                                    <p class="card-text">원주율</p>
+                                    <a href="https://hoo091221.github.io/site/pi" class="card-text">원주율</a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- 근의 공식 계산기 -->
+
+                        <div class="container1" style="display: inline-block;">
+                            <div class="card scroll-text" style="width: 18rem; z-index: 0">
+                                <iframe src="https://hoo091221.github.io/site/root"></iframe>
+                                <div class="card-body">
+                                    <a href="https://hoo091221.github.io/site/root" class="card-text">근의 공식 계산기</a>
                                 </div>
                             </div>
                         </div>
@@ -231,10 +241,28 @@
         <script src="./JS/ani1.js" rel="text/javascript"></script>
         <script src="./JS/cards.js" rel="text/javascript"></script>
         <script src="./JS/scrollanim.js" rel="text/javascript"></script>
-        <script src="./JS/include.js" rel="text/javascript"></script>
         <script src="./JS/tagHref.js" rel="text/javascript"></script>
         <script>
             document.querySelector('.carousel-control-prev-icon').click();
+        </script>
+        <script>
+            // include.js
+            window.addEventListener('load', function() {
+                var allElements = document.getElementsByTagName('*');
+                Array.prototype.forEach.call(allElements, function(el) {
+                    var includePath = `https://hoo091221.github.io/${el.dataset.includePath}`;
+                    if (includePath) {
+                        var xhttp = new XMLHttpRequest();
+                        xhttp.onreadystatechange = function() {
+                            if (this.readyState == 4 && this.status == 200) {
+                                el.outerHTML = this.responseText;
+                            }
+                        };
+                        xhttp.open('GET', includePath, true);
+                        xhttp.send();
+                    }
+                });
+            });
         </script>
 </body>
 
