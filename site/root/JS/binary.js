@@ -3,11 +3,25 @@ function sqrt() {
     b = document.getElementById('b').value;
     c = document.getElementById('c').value;
 
-    d = (b ** 2 - 4 * a * c) / (2 * a);
+    if (a == '' || a == 0) {
+        document.getElementById('log1').innerHTML = '이차방정식이 아닙니다.';
+        document.getElementById('log2').innerHTML = '';
+        document.getElementById('log3').innerHTML = '';
+        document.getElementById('log4').innerHTML = '';
+
+        return;
+    }
+    if (b == '') b = 0;
+    if (c == '') c = 0;
+
+    d = (b ** 2 - 4 * a * c) / (4 * a);
     x1 = `${-b / (2 * a)}±√${d}`;
 
+    if (b = 0) x1 = `±√${d}`;
+    if (solution(d) == 1) x1 = `±${Math.sqrt(d)}`;
+
     if (d == 0) { // 중근인 경우
-        x3 = -b / (2 * a) + Math.sqrt(d) / (2 * a);
+        x3 = -b / (2 * a) + Math.sqrt(d) / (4 * a);
         x1 = x3;
         x3 = '';
         x4 = '';
@@ -16,14 +30,25 @@ function sqrt() {
 
         x1 = `해 (실수 형태): ${x1}`;
     } else if (d < 0) {
-        d = `${-d}𝑖`; // 허근인 경우
+        d = `√${-d}𝑖`; // 허근인 경우
+        if (d == '√1𝑖') d = `𝑖`
+
         x1 = `해 (허수 형태) ${-b / (2 * a)}±√${d}`;
         x3 = '';
         x4 = '';
+
+        if (x1.includes('0±')) x1 = `±${d}`;
+
         document.getElementById('log4').innerHTML = '허근입니다.';
-    } else { // 기타 근이 2개인 경우
-        x3 = -b / (2 * a) + Math.sqrt(d) / (2 * a);
-        x4 = -b / (2 * a) - Math.sqrt(d) / (2 * a);
+    } else { // 기타, 근이 2개인 경우
+
+        x3 = -b / (2 * a) + Math.sqrt(d);
+        x4 = -b / (2 * a) - Math.sqrt(d);
+
+        if (b = 0) x1 = `±√${d}`;
+        if (solution(d) == 1) x1 = `±${Math.sqrt(d)}`;
+
+        document.getElementById('log4').innerHTML = '';
     }
 
     if (x1.includes('해 (실수 형태)') || x1.includes('해 (허수 형태)')) {
@@ -45,23 +70,11 @@ function sqrt() {
     } else {
         document.getElementById('log3').innerHTML = ``;
     }
-
-    console.log(x1, x3, x4)
 }
 
 function solution(n) {
-    let result = [];
-    let divisor = 2;
-
-    while (n >= 2) {
-        if (n % divisor === 0) {
-            result.push(divisor)
-            n = n / divisor;
-        } else divisor++;
-
-    }
-
-    return n;
+    var answer = Math.sqrt(n);
+    return Number.isInteger(answer) ? 1 : 2;
 }
 
 function Discrimination() {
