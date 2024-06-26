@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link href="https://fonts.googleapis.com/css2?family=Jua&display=swap" rel="stylesheet" />
+		<link rel="stylesheet" href="../../btnstyle.css" />
+		<link rel="icon" sizes="57x57" href="../../img/nomoNlogo.png" />
+		<title>nomo</title>
+	</head>
+	<body>
+		<center>
+			<h1 class="text4 blue">
+				자료의 정리 2
+			</h1>
+		</center>
+		<h1 class="text4 blue">
+			히스토그램
+		</h1>
+		<h1 class="text4">
+			막대그래프와 비슷한 모양으로, 도수분포표의 자료를 그래프로 나타낸 것이다.<br>
+			보통의 경우 가로축이 계급, 세로축이 도수를 나타낸다.
+		</h1>
+		<center>
+			<img style="width: 90vw" src="https://hleecaster.com/wp-content/uploads/2019/08/1-2.png">
+		</center>
+		<h1 class="text2">
+			[출처 : https://hleecaster.com/python-matplotlib-histogram/]
+		</h1>
+		<h1 class="text4 blue">
+			히스토그램을 그리는 방법
+		</h1>
+		<h1 class="text4">
+			1. 가로축에는 계급의 양 끝 값 세로축에는 도수를 입력합니다.
+		</h1>
+		<h1 class="text4">
+			2. 양쪽 끝에 계급을 한 개씩 더 추가해 준다.
+		</h1>
+		<h1 class="text4">
+			3. 도수분포표의 값대로 눈금을 채워 그려 준다.
+		</h1>
+		<h1 class="text4 blue">
+			주의점
+		</h1>
+		<h1 class="text4">
+			- 막대그래프처럼 눈금을 띄워 그리지 않고, 눈금을 모두 붙인다.<br>
+		</h1>
+		<h1 class="text4 blue">
+			장/단점
+		</h1>
+		<h1 class="text4">
+			장점 : 자료의 분포 상태를 바로 알 수 있다.<br>
+			단점 : 자료 하나하나의 값을 알기 어렵다.
+		</h1>
+		<h1 class="text4 blue">
+			도수분포다각형
+		</h1>
+		<h1 class="text4">
+			도수분포다각형은 자료의 분포 상태를 확인할 때 쓴다.<br>
+			꺾은선그래프와 비슷하게 생겼지만, 히스토그램과 함께 쓴다.
+		</h1>
+		<center>
+			<img style="width: 90vw" src="data:image/jpeg;base64,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">
+		</center>
+		<h1 class="text4 blue">
+			도수분포다각형을 그리는 방법
+		</h1>
+		<h1 class="text2">
+			[출처 : https://m.cafe.daum.net/math/21ph/24453?listURI=%2Fmath%2F21ph]
+		</h1>
+		<h1 class="text4">
+			1. 히스토그램을 그린다.
+		</h1>
+		<h1 class="text4">
+			2. 히스토그램에서 각각의 계급의 도수를 찍고, 계급의 양끝에 도수가 0인 계급이 있다고 생각하여 중점을 찍는다.
+		</h1>
+		<h1 class="text4">
+			3. 점들을 선분으로 연결한다.
+		</h1>
+		<h1 class="text4 blue">
+			장/단점
+		</h1>
+		<h1 class="text4">
+			장점: 히스토그램이나 다른 도수분포다각형과 겹칠 수 있다.<br>
+			단점: 정확한 변량이 얼마인지 하나하나 알 수 없다.
+		</h1>
+	</body>
+</html>

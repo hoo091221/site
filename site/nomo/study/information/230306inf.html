@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link href="https://fonts.googleapis.com/css2?family=Jua&display=swap" rel="stylesheet" />
+		<link rel="stylesheet" href="../../btnstyle.css" />
+		<script src="https://kit.fontawesome.com/90a3894fee.js" crossorigin="anonymous"></script>
+	<link rel="icon" sizes="57x57" href="../../img/nomoNlogo.png">
+		<title>nomo</title>
+	</head>
+	<body>
+		<center>
+			<h1 class="text4 blue">
+				십진수를 이진수로, 이진수를 십진수로
+			</h1>
+		</center>
+		<h1 class="text4 blue">
+			십진수
+		</h1>
+		<h1 class="text4">
+			평상시 일상생활에 사용되는 수체계로, 0~9까지의 숫자를 사용해 수를 표현하는 것을 말한다. 10개의 숫자를 사용하기에 '십진수' 라고 한다.
+		</h1>
+		<h1 class="text4 blue">
+			이진수
+		</h1>
+		<h1 class="text4">
+			컴퓨터가 사용하는 수체계로, 0~1까지의 숫자를 사용해 수를 표현하는 것을 말한다. 2개의 숫자를 사용하기에 '이진수' 라고 한다.
+		</h1>
+		<h1 class="plus">
+			+Plus<br>
+			16진수<br>
+			0~f까지의 숫자를 사용해 수를 표현하는 것을 말한다. 주로 색을 나타내는 '컬러코드' 에 주로 사용된다.<br>
+			<table style="color: #000">
+				<tr>
+					<td>0</td>
+					<td>1</td>
+					<td>2</td>
+					<td>3</td>
+					<td>4</td>
+					<td>5</td>
+					<td>6</td>
+					<td>7</td>
+					<td>8</td>
+					<td>9</td>
+					<td>a</td>
+					<td>b</td>
+					<td>c</td>
+					<td>d</td>
+					<td>e</td>
+					<td>f</td>
+				</tr>
+			</table>
+		</h1>
+		<h1 class="text4 blue">
+			십진수를 이진수로 만들기
+		</h1>
+		<h1 class="text4 red">
+			방법 1
+		</h1>
+		<h1 class="text4">
+			소인수분해를 하듯 수를 나누는데 이때는 무조건 2로만 나눈다. 그리고 나누면서 나머지를 옆에 써주면 된다.<br>
+			처음 수 오른쪽엔 무조건 1을 쓴다.<br>
+			계산을 완료한 후, 아래에서부터 위로 읽으면 된다.
+		</h1>
+		<center>
+		<img src="../../img/Binary.png" style="width: 40vw;">
+		</center>
+		<h1 class="text4">
+			10 = 1010
+		</h1>
+		<h1 class="text4 red">
+			방법 2
+		</h1>
+		<h1 class="text4">
+			해당하는 십진수의 값과 가까워질 때까지 2<sup>n</sup>을 나열해 본다.<br>
+			이때, 2<sup>0</sup>은 1로 생각하고 쓴다.<br>
+			쓴 숫자들 중 더했을 때 해당하는 십진수의 값과 같은 수들을 동그라미 친다.<br>
+			동그라미가 있는 수 아래에는 1, 없는 수 아래에는 0을 쓴다.
+		</h1>
+		<h1 class="text4">
+			10 = ⑧ 4 ② 1<br>
+			ㅤㅤ  1⠀0⠀1⠀0<br>
+			10 = 1010
+		</h1>
+		<h1 class="text4 blue">
+			2진수를 10진수로
+		</h1>
+		<h1 class="text4">
+			...64 32 16 8 6 4 2 1<br>
+			이중 0에 해당하는 것은 더하지 말고 1에 해당하는 것만 더한다.<br>
+			1010 = ⑧ 4 ② 1 = 8+2 = 10
+		</h1>
+	</body>
+</html>

@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link href="https://fonts.googleapis.com/css2?family=Jua&display=swap" rel="stylesheet" />
+		<link rel="stylesheet" href="../../../btnstyle.css" />
+		<link rel="icon" sizes="57x57" href="../../img/nomoNlogo.png" />
+		<title>nomo</title>
+	</head>
+	<body>
+		<center>
+			<!-- <input type="checkbox" id="chk-hear-mic" /><label for="chk-hear-mic"
+				>마이크 소리 듣기</label
+			> -->
+
+			<div id="sound-clips"></div>
+
+			<button class="playbutton" id="record">녹음</button>
+			<button class="playbutton" id="stop">정지</button>
+			<button id="button" class="playbutton" onclick="music()">
+				일반 ▶
+			</button>
+			<div
+				id="music"
+				style="
+					background-size: 90vw 1000px;
+					background-repeat: no-repeat;
+					width: 90vw;
+					height: 100vh;
+				"
+			></div>
+		</center>
+		<script>
+			function music() {
+				document.getElementById('music').style.backgroundImage =
+					"url('https://mblogthumb-phinf.pstatic.net/MjAxNzA2MjhfMjUy/MDAxNDk4NjM5NDY3MTc0.ACXxiHUVmVbzzU-wyqZGJQMatp0PZJKTZvINVctup9Ag.XL8CS8G13K3B6_gLdb7lZBCGht5bZH-NuNz8rvDYztYg.PNG.cnae31/image.png?type=w800')";
+				var audio = new Audio('../../../audio/tree_sing.mp3');
+				audio.play();
+			}
+
+			
+			const record = document.getElementById('record');
+			const stop = document.getElementById('stop');
+			const soundClips = document.getElementById('sound-clips');
+			const chkHearMic = document.getElementById('chk-hear-mic');
+
+			const audioCtx = new (window.AudioContext || window.webkitAudioContext)(); // 오디오 컨텍스트 정의
+
+			const analyser = audioCtx.createAnalyser();
+			//        const distortion = audioCtx.createWaveShaper()
+			//        const gainNode = audioCtx.createGain()
+			//        const biquadFilter = audioCtx.createBiquadFilter()
+
+			function makeSound(stream) {
+				const source = audioCtx.createMediaStreamSource(stream);
+
+				source.connect(analyser);
+				//            analyser.connect(distortion)
+				//            distortion.connect(biquadFilter)
+				//            biquadFilter.connect(gainNode)
+				//            gainNode.connect(audioCtx.destination) // connecting the different audio graph nodes together
+				analyser.connect(audioCtx.destination);
+			}
+
+			if (navigator.mediaDevices) {
+				console.log('getUserMedia supported.');
+
+				const constraints = {
+					audio: true,
+				};
+				let chunks = [];
+
+				navigator.mediaDevices
+					.getUserMedia(constraints)
+					.then((stream) => {
+						const mediaRecorder = new MediaRecorder(stream);
+
+						// chkHearMic.onchange = (e) => {
+						// 	if (e.target.checked == true) {
+						// 		audioCtx.resume();
+						// 		makeSound(stream);
+						// 	} else {
+						// 		audioCtx.suspend();
+						// 	}
+						// };
+
+						record.onclick = () => {
+							music();
+							mediaRecorder.start();
+							console.log(mediaRecorder.state);
+							console.log('recorder started');
+							record.style.background = 'red';
+							record.style.color = 'black';
+						};
+
+						stop.onclick = () => {
+							mediaRecorder.stop();
+							console.log(mediaRecorder.state);
+							console.log('recorder stopped');
+							record.style.background = '';
+							record.style.color = '';
+						};
+
+						mediaRecorder.onstop = (e) => {
+							console.log('data available after MediaRecorder.stop() called.');
+
+							const clipName = '';
+
+							const clipContainer = document.createElement('article');
+							const clipLabel = document.createElement('p');
+							const audio = document.createElement('audio');
+							const deleteButton = document.createElement('button');//.classname = 'button';
+
+							clipContainer.classList.add('clip');
+							audio.setAttribute('controls', '');
+							//deleteButton.classname = 'button';
+							deleteButton.innerHTML = '삭제하기';
+
+							clipContainer.appendChild(audio);
+							clipContainer.appendChild(clipLabel);
+							clipContainer.appendChild(deleteButton);
+							soundClips.appendChild(clipContainer);
+
+							audio.controls = true;
+							const blob = new Blob(chunks, {
+								type: 'audio/ogg codecs=opus',
+							});
+							chunks = [];
+							const audioURL = URL.createObjectURL(blob);
+							audio.src = audioURL;
+							console.log('recorder stopped');
+
+							deleteButton.onclick = (e) => {
+								evtTgt = e.target;
+								evtTgt.parentNode.parentNode.removeChild(evtTgt.parentNode);
+							};
+						};
+
+						mediaRecorder.ondataavailable = (e) => {
+							chunks.push(e.data);
+						};
+					})
+					.catch((err) => {
+						console.log('The following error occurred: ' + err);
+					});
+			}
+		</script>
+	</body>
+</html>

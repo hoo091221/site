@@ -1,0 +1,144 @@
+table, th, td {
+  border-collapse:collapse;
+	border: 1px solid black;
+	font-family: 'Jua', sans-serif;
+	width: 90vw;
+	height: 5vh;
+	font-size: 3vw;
+	text-align: center;
+}
+
+.ex {
+	font-family: 'Jua', sans-serif;
+	color: green;
+}
+
+.chi {
+	font-family: 'Jua', sans-serif;
+	font-size: 10vw;
+	color: black;
+	padding: 0px;
+	margin: 0px;
+}
+
+.playbutton {
+	background-color: #AAFFFF;
+	font-family: 'Jua', sans-serif;
+	padding: 1vw;
+	border: 0px;
+	font-size: 2.5vw;
+	height: 5vw;
+	text-align: center;
+	margin-top: 2vw;
+}
+h1 {
+	font-family: 'Jua', sans-serif;
+	font-size: 5vw;
+	padding: 0px;
+	margin: 0px;
+}
+
+.red {
+	color: red;
+}
+.redtext {
+	color: red;
+}
+.green {
+	color: green;
+}
+.gr {
+	color: green;
+}
+.g {
+	color: green;
+}
+.gre {
+	color: green;
+}
+.greentext {
+	color: green;
+}
+
+
+
+.black {
+	color: black;
+}
+.bl {
+	color: blue;
+}
+
+.blue {
+	color: blue;
+}
+.bluetext {
+	color: blue;
+}
+
+.text1 {
+	font-family: 'Jua', sans-serif;
+	font-size: 1vw;
+}
+.text2 {
+	font-family: 'Jua', sans-serif;
+	font-size: 2vw;
+}
+.text3 {
+	font-family: 'Jua', sans-serif;
+	font-size: 3vw;
+}
+.text4 {
+	font-family: 'Jua', sans-serif;
+	font-size: 4vw;
+}
+.text5 {
+	font-family: 'Jua', sans-serif;
+	font-size: 5vw;
+}
+.text6 {
+	font-family: 'Jua', sans-serif;
+	font-size: 6vw;
+}
+.plus {
+	font-family: 'Jua', sans-serif;
+	font-size: 4vw;
+	color: #9932CC;
+}
+@keyframes clicked {
+    from {
+        transform: scale(0);
+        opacity: 0
+    }
+
+    to {
+        transform: scale(1);
+        opacity: 1
+    }
+}
+
+#clickEffect {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 80px;
+    height: 80px;
+    pointer-events: none
+}
+
+#clickEffect::after {
+    content: "";
+    display: block;
+    height: 100%;
+    background: rgba(0, 0, 0, .6);
+    border-radius: 50%
+}
+
+#clickEffect.effect {
+    display: block
+}
+
+#clickEffect.effect::after {
+    animation: clicked .5s cubic-bezier(.29, 0, .15, 1)
+}

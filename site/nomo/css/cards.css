@@ -1,0 +1,105 @@
+
+/* 카드 정렬 */
+
+.full {
+	position: relative;
+	display: inline-block;
+}
+
+/* 카드 사이즈 */
+
+.card {
+	display: inline-block;
+	margin: 2rem;
+	text-align: center;
+	position: relative;
+}
+
+.card-img-top {
+	height: 12rem;
+}
+
+@media (width > 1499px) {
+	.full {
+		width: 1408px;
+	}
+}
+@media (width < 1500px) {
+	.full {
+		width: 1056px;
+	}
+}
+@media (width < 1100px) {
+	.full {
+		width: 704px;
+	}
+}
+@media (width < 770px) {
+	.full {
+		width: 352px;
+	}
+}
+
+/* 카드 CSS */
+
+.card {
+	display:inline;
+	transition: all 500ms;
+	font-size: 1rem;
+}
+
+.card-img-top {
+	height: 25vh;
+}
+
+/* 호버 시 애니메이션 */
+
+.red:hover {
+	box-shadow: 5px 5px 5px 5px red;
+}
+
+.orange:hover {
+	box-shadow: 5px 5px 5px 5px orange;
+}
+
+.yellow:hover {
+	box-shadow: 5px 5px 5px 5px yellow;
+}
+
+.green:hover {
+	box-shadow: 5px 5px 5px 5px lime;
+}
+
+.cyan:hover {
+	box-shadow: 5px 5px 5px 5px cyan;
+}
+
+.pink:hover {
+	box-shadow: 5px 5px 5px 5px pink;
+}
+
+.purple:hover {
+	box-shadow: 5px 5px 5px 5px purple;
+}
+
+.redyellow:hover {
+	box-shadow: 
+		1px 1px 1px 1px orangered,
+		2px 2px 2px 2px salmon,
+		3px 3px 3px 3px orange,
+		3px 3px 3px 3px coral,
+		5px 5px 5px 5px yellow;
+}
+
+.yellowgreen:hover {
+	box-shadow: 
+		1px 1px 1px 1px limegreen,
+		2px 2px 2px 2px springgreen,
+		3px 3px 3px 3px palegreen,
+		3px 3px 3px 3px greenyellow,
+		5px 5px 5px 5px yellow;
+}
+
+.card-img-top {
+	height: 25vh;
+}

@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link href="https://fonts.googleapis.com/css2?family=Jua&display=swap" rel="stylesheet" />
+		<link rel="stylesheet" href="../../btnstyle.css" />
+		<link rel="icon" sizes="57x57" href="../../img/nomoNlogo.png" />
+		<title>nomo</title>
+	</head>
+	<body>
+		<center>
+			<h1 class="text4 blue">
+				다각형의 내각과 외각
+			</h1>
+		</center>
+		<h1 class="text4 blue">
+			기초지식
+		</h1>
+		<h1 class="text4">
+			다각형 : 선분으로 둘러싸여 있는 도형<br>
+			정다각형 : 모든 변의 크기가 같고, 모든 각의 크기가 같은 다각형<br>
+			내각 : 이웃한 두 개의 변이 다각형의 안쪽에 만드는 각<br>
+			외각 : 이웃한 두 개의 변이 다각형의 바깥쪽에 만드는 각<br>
+			각의 성질 : 외각 + 내각 = 180°이다.
+		</h1>
+		<h1 class="text4 blue">
+			정N각형의 총 대각선의 개수
+		</h1>
+		<h1 class="text4">
+			정N각형에서 한 점에서 이을 수 있는 대각선의 개수는 자신과 양쪽의 이웃한 점을 뺀 N-3개이다.<br>
+			따라서 N(N-3)을 하게 되면 대각선이 중복되므로, <br>
+			<span style="color: red">N(N-3)/2</span>를 하면 총 대각선의 개수를 구할 수 있다.
+		</h1>
+		<h1 class="text4">
+			N각형의 총 내각의 합
+		</h1>
+		<h1 class="text4">
+			삼각형의 세 각의 합은 180°이다. 정N각형에서, 한 점에서 이을 수 있는 대각선의 개수는 N-3개이다. 따라서 정N각형은 삼각형이 N-2개 만들어지고, 따라서 N각형의 총 내각의 합은 180(N-2)°이다.
+		</h1>
+		<h1 class="text4">
+			N각형의 총 외각
+		</h1>
+		<h1 class="text4">
+			어느 다각형이나 외각은 항상 360°로 일정하다.
+		</h1>
+		<table>
+			<tr>
+				<th>
+					
+				</th>
+				<th>
+					사각형
+				</th>
+				<th>
+					오각형
+				</th>
+				<th>
+					육각형
+				</th>
+				<th>
+					N각형
+				</th>
+			</tr>
+			<tr>
+				<td>
+					한 점에서 그을 수 있는 대각선의 수
+				</td>
+				<td>
+					4-3=1
+				</td>
+				<td>
+					5-3=2
+				</td>
+				<td>
+					6-3=3
+				</td>
+				<td>
+					N-3
+				</td>
+			</tr>
+			<tr>
+				<td>
+					만들어지는 삼각형의 수(개)
+				</td>
+				<td>
+					4-2=2
+				</td>
+				<td>
+					5-2=3
+				</td>
+				<td>
+					6-2=4
+				</td>
+				<td>
+					N-2
+				</td>
+			</tr>
+			<tr>
+				<td>
+					내각의 크기의 합
+				</td>
+				<td>
+					180°x2=360°
+				</td>
+				<td>
+					180°x3=540°
+				</td>
+				<td>
+					180°x4=720°
+				</td>
+				<td>
+					180°x(N-2)
+				</td>
+			</tr>
+			<tr>
+				<td>
+					정N각형일때 한 내각의 크기
+				</td>
+				<td>
+					180°x2÷4=90°
+				</td>
+				<td>
+					180°x3÷5=108°
+				</td>
+				<td>
+					180°x4÷6=120°
+				</td>
+				<td>
+					180°x(N-2)÷n
+				</td>
+			</tr>
+			<tr>
+				<td>
+					외각의 합
+				</td>
+				<td>
+					360°
+				</td>
+				<td>
+					360°
+				</td>
+				<td>
+					360°
+				</td>
+				<td>
+					360°
+				</td>
+			</tr>
+			<tr>
+				<td>
+					정N각형의 한 외각의 크기
+				</td>
+				<td>
+					360°÷4=90°
+				</td>
+				<td>
+					360°÷5=72°
+				</td>
+				<td>
+					360°÷6=60°
+				</td>
+				<td>
+					360°÷N
+				</td>
+			</tr>
+		</table>
+	</body>
+</html>

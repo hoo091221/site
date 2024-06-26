@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link href="https://fonts.googleapis.com/css2?family=Jua&display=swap" rel="stylesheet" />
+		<link rel="stylesheet" href="../../btnstyle.css" />
+		<link rel="icon" sizes="57x57" href="../../img/nomoNlogo.png" />
+		<title>nomo</title>
+		<script type="text/javascript" src="//dapi.kakao.com/v2/maps/sdk.js?appkey=784f923643ce882c097aec53f7ad11fa"></script>
+	</head>
+	<body>
+		<center>
+			<h1 style="color: blue; font-size: 5vw; font-family: 'Jua', sans-serif;">
+				내가 있는 곳의 위도와 경도는?
+			</h1>
+		</center>
+		<script>
+			window.onload = function map() {
+				getLocation();
+				showPosition();
+			};
+
+			function getLocation() {
+				if (navigator.geolocation) {
+					navigator.geolocation.getCurrentPosition(showPosition);
+				} else {
+					document.getElementById('text').innerHTML =
+						'Geolocation is not supported by this browser.';
+				}
+			}
+
+			function showPosition(position) {
+				document.getElementById('text').innerHTML =
+					'<span style="font-size: 5vw">경도</span>  <span style="color: #6DD66D;font-size: 10vw">' +
+					position.coords.latitude +
+					'</span>도' +
+					'<br><span style="font-size: 5vw">위도</span>  <span style="color: #6DD66D;font-size: 10vw">' +
+					position.coords.longitude +
+					'</span>도';
+			}
+		</script>
+		<h1 id="text" style="font-size: 5vw; font-family: 'Jua', sans-serif;"></h1>
+		<button style="border: 0px; padding: 2vw; border-radius: 1vw; font-family: 'Jua', sans-serif;">
+			새로고침하기
+		</button>
+	</body>
+</html>

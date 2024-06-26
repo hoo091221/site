@@ -49,6 +49,8 @@
 
     <div data-include-path="templates/header.html"></div>
 
+    <!-- cards -->
+
     <div style="width: 100vw;position: fixed;" id="carouselExampleControlsNoTouching" class="carousel slide" data-bs-touch="false">
         <div class="carousel-inner">
             <div class="carousel-item active">
@@ -92,6 +94,7 @@
         </div>
 
         <!-- 다운로드창 -->
+
         <div class="slides">
             <center>
                 <div class="bg cov">
@@ -250,7 +253,7 @@
             window.addEventListener('load', function() {
                 var allElements = document.getElementsByTagName('*');
                 Array.prototype.forEach.call(allElements, function(el) {
-                    var includePath = `https://hoo091221.github.io/${el.dataset.includePath}`;
+                    var includePath = `https://${window.location.host}/${el.dataset.includePath}`;
                     if (includePath) {
                         var xhttp = new XMLHttpRequest();
                         xhttp.onreadystatechange = function() {
