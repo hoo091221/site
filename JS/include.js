@@ -2,7 +2,7 @@
 
 var allElements = document.getElementsByTagName('*');
 Array.prototype.forEach.call(allElements, function(el) {
-    var includePath = `https://hoo091221.github.io/${el.dataset.includePath}`;
+    var includePath = `https://${window.location.host}/${el.dataset.includePath}`;
     if (includePath) {
         var xhttp = new XMLHttpRequest();
         xhttp.onreadystatechange = function() {
