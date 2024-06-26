@@ -10,6 +10,6 @@ Array.prototype.forEach.call(allElements, function(el) {
             }
         };
         xhttp.open('GET', includePath, true);
-        // xhttp.send();
+        xhttp.send();
     }
 });
