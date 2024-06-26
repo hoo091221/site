@@ -1,5 +1,5 @@
 // include.js
-window.addEventListener('load', function() {
+function include() {
     var allElements = document.getElementsByTagName('*');
     Array.prototype.forEach.call(allElements, function(el) {
         var includePath = `https://${window.location.host}/${el.dataset.includePath}`;
@@ -13,4 +13,6 @@ window.addEventListener('load', function() {
             xhttp.open('GET', includePath, true);
         }
     });
-});
+}
+
+include()
