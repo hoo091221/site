@@ -245,27 +245,9 @@
         <script src="./JS/cards.js" rel="text/javascript"></script>
         <script src="./JS/scrollanim.js" rel="text/javascript"></script>
         <script src="./JS/tagHref.js" rel="text/javascript"></script>
+        <script src="./JS/include.js" rel="text/javascript"></script>
         <script>
             document.querySelector('.carousel-control-prev-icon').click();
-        </script>
-        <script>
-            // include.js
-            window.addEventListener('load', function() {
-                var allElements = document.getElementsByTagName('*');
-                Array.prototype.forEach.call(allElements, function(el) {
-                    var includePath = `https://${window.location.host}/${el.dataset.includePath}`;
-                    if (includePath) {
-                        var xhttp = new XMLHttpRequest();
-                        xhttp.onreadystatechange = function() {
-                            if (this.readyState == 4 && this.status == 200) {
-                                el.outerHTML = this.responseText;
-                            }
-                        };
-                        xhttp.open('GET', includePath, true);
-                        xhttp.send();
-                    }
-                });
-            });
         </script>
 </body>
 
