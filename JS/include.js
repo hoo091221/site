@@ -1,5 +1,4 @@
 // include.js
-
 var allElements = document.getElementsByTagName('*');
 Array.prototype.forEach.call(allElements, function(el) {
     var includePath = `https://${window.location.host}/${el.dataset.includePath}`;
@@ -11,6 +10,6 @@ Array.prototype.forEach.call(allElements, function(el) {
             }
         };
         xhttp.open('GET', includePath, true);
-        xhttp.send();
+        // xhttp.send();
     }
 });
