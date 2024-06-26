@@ -25,9 +25,11 @@
                                 프로젝트
                             </a>
                             <ul class="dropdown-menu">
-                                <li><a class="dropdown-item" href="./project/doing-project/index.html">진행중인 프로젝트</a>
+                                <li><a class="dropdown-item" data-tag-href="/project/doing-project/index.html">진행중인
+                                        프로젝트</a>
                                 </li>
-                                <li><a class="dropdown-item" href="./project/end-project/index.html">완성된 프로젝트</a></li>
+                                <li><a class="dropdown-item" data-tag-href="/project/end-project/index.html">완성된
+                                        프로젝트</a></li>
                                 <li>
                                     <hr class="dropdown-divider" />
                                 </li>
@@ -82,5 +84,16 @@
                 }
             }
         }
+    </script>
+
+    <script>
+        // include.js
+        var allElements = document.getElementsByTagName('*');
+        Array.prototype.forEach.call(allElements, function(el) {
+            var includePath = `https://${window.location.host}/${el.dataset.tagHref}`;
+            if (includePath) {
+                el.href = includePath;
+            }
+        });
     </script>
 </header>
